@@ -1,8 +1,6 @@
 /**
  * For usage, visit Chart.js docs https://www.chartjs.org/docs/latest/
  */
-import { Chart } from 'chart.js';
-
 const pieConfig = {
   type: 'doughnut',
   data: {
@@ -32,8 +30,4 @@ const pieConfig = {
   },
 }
 
-// change this to the id of your chart element in HMTL
-const pieCtx = document.getElementById('pie')
-window.myPie = new Chart(pieCtx, pieConfig)
-
-export default myPie;
+export default pieConfig;

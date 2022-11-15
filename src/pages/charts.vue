@@ -5,7 +5,7 @@
         Charts
       </h2>
       <!-- CTA -->
-      <NuxtLink class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+      <a class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
         to="https://github.com/estevanmaito/windmill-dashboard">
         <div class="flex items-center">
           <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -16,13 +16,13 @@
           <span>Star this project on GitHub</span>
         </div>
         <span>View more &RightArrow;</span>
-      </NuxtLink>
+      </a>
 
       <p class="mb-8 text-gray-600 dark:text-gray-400">
         Charts are provided by
-        <NuxtLink class="text-purple-600 dark:text-purple-400 hover:underline" to="https://www.chartjs.org/">
+        <a class="text-purple-600 dark:text-purple-400 hover:underline" to="https://www.chartjs.org/">
           Chart.js
-        </NuxtLink>
+        </a>
         . Note that the default legends are disabled and you should
         provide a description for your charts in HTML. See source code for
         examples.
@@ -93,5 +93,11 @@
 </template>
 
 <script lang="ts">
+import barConfig from '@/utils/charts-bars';
+import lineConfig from '@/utils/charts-lines';
+import pieConfig from '@/utils/charts-pie';
+import { Chart } from 'chart.js';
+
 export default defineComponent({});
+
 </script>

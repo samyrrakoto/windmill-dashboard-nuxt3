@@ -1,8 +1,6 @@
 /**
  * For usage, visit Chart.js docs https://www.chartjs.org/docs/latest/
  */
-import { Chart } from 'chart.js';
-
 const barConfig = {
   type: 'bar',
   data: {
@@ -31,8 +29,4 @@ const barConfig = {
     },
   },
 }
-
-const barsCtx = document.getElementById('bars')
-window.myBar = new Chart(barsCtx, barConfig)
-
-export default myBar;
+export default barConfig;

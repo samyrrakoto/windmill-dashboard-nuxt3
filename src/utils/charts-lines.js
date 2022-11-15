@@ -1,8 +1,6 @@
 /**
  * For usage, visit Chart.js docs https://www.chartjs.org/docs/latest/
  */
-import { Chart } from 'chart.js';
-
 const lineConfig = {
   type: 'line',
   data: {
@@ -68,8 +66,4 @@ const lineConfig = {
   },
 }
 
-// change this to the id of your chart element in HMTL
-const lineCtx = document.getElementById('line')
-window.myLine = new Chart(lineCtx, lineConfig)
-
-export default myLine;
+export default lineConfig;
