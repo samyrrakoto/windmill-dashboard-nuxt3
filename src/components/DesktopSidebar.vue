@@ -2,9 +2,9 @@
     <!-- Desktop sidebar -->
     <aside class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0">
         <div class="py-4 text-gray-500 dark:text-gray-400">
-            <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
+            <NuxtLink class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" to="#">
                 With Love
-            </a>
+            </NuxtLink>
             <ul class="mt-6">
                 <li class="relative px-6 py-3">
                     <!-- Active items have the snippet below -->
@@ -14,8 +14,8 @@
                       ></span> -->
                     <!-- Add this classes to an active anchor (a tag) -->
                     <!-- text-gray-800 dark:text-gray-100 -->
-                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                        href="../index.html">
+                    <NuxtLink class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        to="/">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path
@@ -23,13 +23,13 @@
                             </path>
                         </svg>
                         <span class="ml-4">Dashboard</span>
-                    </a>
+                    </NuxtLink>
                 </li>
             </ul>
             <ul>
                 <li class="relative px-6 py-3">
-                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                        href="../forms.html">
+                    <NuxtLink  class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        to="/forms">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path
@@ -37,11 +37,11 @@
                             </path>
                         </svg>
                         <span class="ml-4">Forms</span>
-                    </a>
+                    </NuxtLink>
                 </li>
                 <li class="relative px-6 py-3">
-                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                        href="../cards.html">
+                    <NuxtLink class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        to="/cards">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path
@@ -49,22 +49,22 @@
                             </path>
                         </svg>
                         <span class="ml-4">Cards</span>
-                    </a>
+                    </NuxtLink>
                 </li>
                 <li class="relative px-6 py-3">
-                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                        href="../charts.html">
+                    <NuxtLink class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        to="/charts">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
                             <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
                         </svg>
                         <span class="ml-4">Charts</span>
-                    </a>
+                    </NuxtLink>
                 </li>
                 <li class="relative px-6 py-3">
-                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                        href="../buttons.html">
+                    <NuxtLink class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        to="/buttons">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path
@@ -72,11 +72,11 @@
                             </path>
                         </svg>
                         <span class="ml-4">Buttons</span>
-                    </a>
+                    </NuxtLink>
                 </li>
                 <li class="relative px-6 py-3">
-                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                        href="../modals.html">
+                    <NuxtLink class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        to="/modals">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path
@@ -84,17 +84,17 @@
                             </path>
                         </svg>
                         <span class="ml-4">Modals</span>
-                    </a>
+                    </NuxtLink>
                 </li>
                 <li class="relative px-6 py-3">
-                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                        href="../tables.html">
+                    <NuxtLink class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                        to="/tables">
                         <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
                         </svg>
                         <span class="ml-4">Tables</span>
-                    </a>
+                    </NuxtLink>
                 </li>
                 <li class="relative px-6 py-3">
                     <button
@@ -124,27 +124,27 @@
                             aria-label="submenu">
                             <li
                                 class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                                <a class="w-full" href="./login.html">Login</a>
+                                <NuxtLink class="w-full" to="./login">Login</NuxtLink>
                             </li>
                             <li
                                 class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                                <a class="w-full" href="./create-account.html">
+                                <NuxtLink class="w-full" to="./create-account">
                                     Create account
-                                </a>
+                                </NuxtLink>
                             </li>
                             <li
                                 class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                                <a class="w-full" href="./forgot-password.html">
+                                <NuxtLink class="w-full" to="./forgot-password">
                                     Forgot password
-                                </a>
+                                </NuxtLink>
                             </li>
                             <li
                                 class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                                <a class="w-full" href="./404.html">404</a>
+                                <NuxtLink class="w-full" to="/not-found">404</NuxtLink>
                             </li>
                             <li
                                 class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                                <a class="w-full" href="./blank.html">Blank</a>
+                                <NuxtLink class="w-full" to="/">Blank</NuxtLink>
                             </li>
                         </ul>
                     </template>
