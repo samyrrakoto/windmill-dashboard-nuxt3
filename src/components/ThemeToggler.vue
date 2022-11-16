@@ -21,15 +21,35 @@
 
 <script lang="ts">
 export default defineComponent({
+    mounted() {
+    if (localStorage.dark) {
+      this.dark = localStorage.dark;
+        }
+    },
     data() {
         return {
-            dark: false,
+            dark: true,
         }
     },
     methods: {
         toggleTheme() {
-            this.dark = !this.dark;
-        }
+            this.dark = !this.dark
+            this.setThemeToLocalStorage(String(this.dark))
+            this.$emit('dark-mode-toggled');
+        },
+        getThemeFromLocalStorage() {
+            if (localStorage.getItem('dark')) {
+                return JSON.parse(String(localStorage.getItem('dark')))
+            }
+
+            return (
+                !!matchMedia &&
+                matchMedia('(prefers-color-scheme: dark)').matches
+            );
+        },
+        setThemeToLocalStorage(value: string) {
+            localStorage.setItem('dark', value)
+        },
     },
 });
 </script>
