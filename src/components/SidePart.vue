@@ -1,6 +1,6 @@
 <template>
     <desktop-sidebar></desktop-sidebar>
-    <mobile-sidebar></mobile-sidebar>
+    <!--<mobile-sidebar></mobile-sidebar>-->
 </template>
 
 <script lang="ts">
