@@ -156,7 +156,6 @@ export default defineComponent({
                     ],
                 },
             ],
-            previousActiveElement: <MenuElement>{},
             isPagesMenuOpen: false,
             activeLink: false,
         }
