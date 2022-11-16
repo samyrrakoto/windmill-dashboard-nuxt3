@@ -170,7 +170,7 @@ export default defineComponent({
     },
     methods: {
         togglePagesMenu() {
-            this.isPagesMenuOpen = true;
+            this.isPagesMenuOpen = !this.isPagesMenuOpen;
         },
     },
 });

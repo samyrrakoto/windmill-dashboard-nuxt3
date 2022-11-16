@@ -58,8 +58,12 @@ export default defineComponent({
         }
     },
     methods: {
-        toggleNotificationsMenu(){},
-        closeNotificationsMenu(){},
+        toggleNotificationsMenu(){
+            this.isNotificationsMenuOpen = !this.isNotificationsMenuOpen;
+        },
+        closeNotificationsMenu(){
+            this.isNotificationsMenuOpen = false;
+        },
     },
 });
 </script>

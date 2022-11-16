@@ -60,8 +60,12 @@ export default defineComponent({
         }
     },
     methods: {
-        toggleProfileMenu() { },
-        closeProfileMenu() { },
+        toggleProfileMenu() {
+            this.isProfileMenuOpen = !this.isProfileMenuOpen;
+        },
+        closeProfileMenu() {
+            this.isProfileMenuOpen = false;
+        },
     },
 });
 </script>
