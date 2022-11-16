@@ -18,26 +18,6 @@
               <span>View more &RightArrow;</span>
             </NuxtLink>
 
-            <div class="max-w-2xl px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
-              <p class="mb-4 text-gray-600 dark:text-gray-400">
-                This is possibly
-                <strong>the most accessible a modal can get</strong>
-                , using JavaScript. When opened, it uses
-                <code>assets/js/focus-trap.js</code>
-                to create a
-                <em>focus trap</em>
-                , which means that if you use your keyboard to navigate around,
-                focus won't leak to the elements behind, staying inside the
-                modal in a loop, until you take any action.
-              </p>
-
-              <p class="text-gray-600 dark:text-gray-400">
-                Also, on small screens it is placed at the bottom of the screen,
-                to account for larger devices and make it easier to click the
-                larger buttons.
-              </p>
-            </div>
-
             <div>
               <button @click="openModal"
                 class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
@@ -47,15 +27,15 @@
           </div>
         </main>
         <!-- Modal backdrop. This what you want to place close to the closing body tag -->
-        <div x-show="isModalOpen" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0"
+        <div v-show="isModalOpen" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0"
           x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-150"
           x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
           class="fixed inset-0 z-30 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center">
           <!-- Modal -->
-          <div x-show="isModalOpen" x-transition:enter="transition ease-out duration-150"
+          <div v-show="isModalOpen" x-transition:enter="transition ease-out duration-150"
             x-transition:enter-start="opacity-0 transform translate-y-1/2" x-transition:enter-end="opacity-100"
             x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0  transform translate-y-1/2" @click.away="closeModal" @keydown.escape="closeModal"
+            x-transition:leave-end="opacity-0  transform translate-y-1/2" @keydown.escape="closeModal"
             class="w-full px-6 py-4 overflow-hidden bg-white rounded-t-lg dark:bg-gray-800 sm:rounded-lg sm:m-4 sm:max-w-xl"
             role="dialog" id="modal">
             <!-- Remove header if you don't want a close icon. Use modal body to place modal tile. -->
@@ -100,9 +80,18 @@
 
 <script lang="ts">
 export default defineComponent({
+  data() {
+    return {
+      isModalOpen: false,
+    }
+  },
   methods: {
-    openModal(){},
-    closeModal(){},
+    openModal(){
+      this.isModalOpen = true;
+    },
+    closeModal(){
+      this.isModalOpen = false;
+    },
   },
 });
 </script>
