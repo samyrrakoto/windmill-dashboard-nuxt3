@@ -14,8 +14,6 @@
     "nuxt": "3.0.0-rc.13"
   },
   "dependencies": {
-    "alpinejs": "^3.10.5",
-    "chart.js": "^3.9.1",
-    "vue-chart.js": "^0.2.0"
+    "chart.js": "^3.9.1"
   }
 }

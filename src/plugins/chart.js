@@ -1,7 +1,4 @@
 /* eslint-disable vue/one-component-per-file */
-import Vue from 'vue'
-import { Bar, Line, Doughnut, Pie } from 'vue-chart.js'
-
 ChartJS.register(
   Title,
   Tooltip,
