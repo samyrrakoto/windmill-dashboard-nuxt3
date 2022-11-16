@@ -24,7 +24,7 @@
 export default defineComponent({
     data() {
         return {
-            title: 'With love',
+            title: 'Windmill Dashboard x Nuxt3',
             isSideMenuOpen: false,
         }
     },

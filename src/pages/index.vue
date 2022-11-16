@@ -3,12 +3,5 @@
 </template>
 
 <script lang="ts">
-export default defineComponent({
-  data() {
-    return {
-      title: 'With love',
-
-    }
-  },
-});
+export default defineComponent({});
 </script>

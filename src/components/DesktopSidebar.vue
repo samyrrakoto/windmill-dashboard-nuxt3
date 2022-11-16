@@ -3,7 +3,7 @@
     <aside class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0">
         <div class="py-4 text-gray-500 dark:text-gray-400">
             <NuxtLink class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" to="#">
-                With Love
+                Windmill Dashboard
             </NuxtLink>
             <ul class="mt-6">
                 <li class="relative px-6 py-3">
@@ -115,7 +115,7 @@
                                 clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <template x-if="isPagesMenuOpen">
+                    <div v-if="isPagesMenuOpen">
                         <ul x-transition:enter="transition-all ease-in-out duration-300"
                             x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl"
                             x-transition:leave="transition-all ease-in-out duration-300"
@@ -147,7 +147,7 @@
                                 <NuxtLink class="w-full" to="/">Blank</NuxtLink>
                             </li>
                         </ul>
-                    </template>
+                    </div>
                 </li>
             </ul>
             <div class="px-6 my-6">
@@ -163,8 +163,15 @@
 
 <script lang="ts">
 export default defineComponent({
+    data() {
+        return {
+            isPagesMenuOpen: false,
+        }
+    },
     methods: {
-        togglePagesMenu() { },
+        togglePagesMenu() {
+            this.isPagesMenuOpen = true;
+        },
     },
 });
 </script>

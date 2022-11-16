@@ -117,7 +117,7 @@
                     clip-rule="evenodd"></path>
                 </svg>
               </button>
-              <template x-if="isPagesMenuOpen">
+              <div v-if="isPagesMenuOpen">
                 <ul x-transition:enter="transition-all ease-in-out duration-300"
                   x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl"
                   x-transition:leave="transition-all ease-in-out duration-300"
@@ -144,7 +144,7 @@
                     <NuxtLink class="w-full" to="/">Blank</NuxtLink>
                   </li>
                 </ul>
-              </template>
+              </div>
             </li>
           </ul>
           <div class="px-6 my-6">
@@ -180,7 +180,6 @@
                     class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
                     aria-hidden="true"
                   ></span> -->
-    
               <!-- Add this classes to an active anchor (a tag) -->
               <!-- text-gray-800 dark:text-gray-100 -->
               <NuxtLink class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -284,7 +283,7 @@
                     clip-rule="evenodd"></path>
                 </svg>
               </button>
-              <template x-if="isPagesMenuOpen">
+              <div v-if="isPagesMenuOpen">
                 <ul x-transition:enter="transition-all ease-in-out duration-300"
                   x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl"
                   x-transition:leave="transition-all ease-in-out duration-300"
@@ -311,7 +310,7 @@
                     <NuxtLink class="w-full" to="pages/blank">Blank</NuxtLink>
                   </li>
                 </ul>
-              </template>
+              </div>
             </li>
           </ul>
           <div class="px-6 my-6">
@@ -344,29 +343,30 @@
                       d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                       clip-rule="evenodd"></path>
                   </svg>
-                </div>
+              </div>
                 <input
                   class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input"
                   type="text" placeholder="Search for projects" aria-label="Search" />
               </div>
             </div>
-            <ul class="flex items-center flex-shrink-0 space-x-6">
+          </div>
+          <ul class="flex items-center flex-shrink-0 space-x-6">
               <!-- Theme toggler -->
               <li class="flex">
                 <button class="rounded-md focus:outline-none focus:shadow-outline-purple" @click="toggleTheme"
                   aria-label="Toggle color mode">
-                  <template x-if="!dark">
+                  <div v-if="!dark">
                     <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                     </svg>
-                  </template>
-                  <template x-if="dark">
+                  </div>
+                  <div v-if="dark">
                     <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd"
                         d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
                         clip-rule="evenodd"></path>
                     </svg>
-                  </template>
+                  </div>
                 </button>
               </li>
               <!-- Notifications menu -->
@@ -383,7 +383,7 @@
                   <span aria-hidden="true"
                     class="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"></span>
                 </button>
-                <template x-if="isNotificationsMenuOpen">
+                <div v-if="isNotificationsMenuOpen">
                   <ul x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0" @click.away="closeNotificationsMenu"
                     @keydown.escape="closeNotificationsMenu"
@@ -416,7 +416,7 @@
                       </NuxtLink>
                     </li>
                   </ul>
-                </template>
+                </div>
               </li>
               <!-- Profile menu -->
               <li class="relative">
@@ -426,7 +426,7 @@
                     src="https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82"
                     alt="" aria-hidden="true" />
                 </button>
-                <template x-if="isProfileMenuOpen">
+                <div v-if="isProfileMenuOpen">
                   <ul x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0" @click.away="closeProfileMenu" @keydown.escape="closeProfileMenu"
                     class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700"
@@ -467,11 +467,12 @@
                       </NuxtLink>
                     </li>
                   </ul>
-                </template>
+                </div>
               </li>
             </ul>
-          </div>
         </header>
+      </div>
+      <div>
         <main class="h-full pb-16 overflow-y-auto">
           <div class="container flex flex-col items-center px-6 mx-auto">
             <svg class="w-12 h-12 mt-8 text-purple-200" fill="currentColor" viewBox="0 0 20 20">
@@ -500,6 +501,10 @@
     data() {
       return {
         title: '404',
+        isPagesMenuOpen: false,
+        dark: false,
+        isNotificationsMenuOpen: false,
+        isProfileMenuOpen: false
       }
     },
     methods: {
