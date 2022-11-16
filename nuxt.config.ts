@@ -6,5 +6,8 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
     ],
+    plugins: [
+        { src:'@/plugins/chart.js', mode: 'client' }
+    ],
     srcDir: 'src',
 })

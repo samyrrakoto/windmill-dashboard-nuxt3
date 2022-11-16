@@ -74,7 +74,7 @@
           <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
             Bars
           </h4>
-          <canvas id="bars"></canvas>
+          <bar-chart></bar-chart>>
           <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
             <!-- Chart legend -->
             <div class="flex items-center">
@@ -93,11 +93,26 @@
 </template>
 
 <script lang="ts">
-import barConfig from '@/utils/charts-bars';
-import lineConfig from '@/utils/charts-lines';
-import pieConfig from '@/utils/charts-pie';
-import { Chart } from 'chart.js';
+import Bar from 'chart.js'
+import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale, Chart } from 'chart.js'
 
-export default defineComponent({});
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
+export default defineComponent({
+  components: { Bar },
+  data() {
+    return {
+      chartData: {
+        labels: ['January', 'February', 'March'],
+        datasets: [
+          {
+            label: 'Data One',
+            backgroundColor: '#f87979',
+            data: [40, 20, 12]
+          }
+        ]
+      }
+    }
+  }
+});
 
-</script>
+</script>-
