@@ -34,7 +34,7 @@
           <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
             Doughnut/Pie
           </h4>
-          <canvas id="pie"></canvas>
+          <!-- Doughnut chart component here-->
           <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
             <!-- Chart legend -->
             <div class="flex items-center">
@@ -56,7 +56,7 @@
           <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
             Lines
           </h4>
-          <canvas id="line"></canvas>
+          <!-- Lines chart component here-->
           <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
             <!-- Chart legend -->
             <div class="flex items-center">
@@ -74,7 +74,7 @@
           <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
             Bars
           </h4>
-          <bar-chart></bar-chart>>
+          <!-- Bar chart component here-->
           <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
             <!-- Chart legend -->
             <div class="flex items-center">
@@ -93,26 +93,5 @@
 </template>
 
 <script lang="ts">
-import Bar from 'chart.js'
-import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale, Chart } from 'chart.js'
-
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
-export default defineComponent({
-  components: { Bar },
-  data() {
-    return {
-      chartData: {
-        labels: ['January', 'February', 'March'],
-        datasets: [
-          {
-            label: 'Data One',
-            backgroundColor: '#f87979',
-            data: [40, 20, 12]
-          }
-        ]
-      }
-    }
-  }
-});
-
+export default defineComponent({});
 </script>-

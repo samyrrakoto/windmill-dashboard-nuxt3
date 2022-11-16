@@ -12,8 +12,5 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/tailwindcss": "^6.1.3",
     "nuxt": "3.0.0-rc.13"
-  },
-  "dependencies": {
-    "chart.js": "^3.9.1"
   }
 }
