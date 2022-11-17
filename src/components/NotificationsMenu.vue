@@ -52,6 +52,9 @@
 
 <script lang="ts">
 export default defineComponent({
+    mounted() {
+        this.$nuxtbus.on('profile-menu-open', this.closeNotificationsMenu)
+    },
     data() {
         return {
             isNotificationsMenuOpen: false,
@@ -60,6 +63,9 @@ export default defineComponent({
     methods: {
         toggleNotificationsMenu(){
             this.isNotificationsMenuOpen = !this.isNotificationsMenuOpen;
+            if (this.isNotificationsMenuOpen){
+                this.$nuxtbus.emit('notifications-menu-open', true)
+            }
         },
         closeNotificationsMenu(){
             this.isNotificationsMenuOpen = false;
