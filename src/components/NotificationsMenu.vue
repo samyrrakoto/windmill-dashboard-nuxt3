@@ -15,7 +15,7 @@
         </button>
         <div v-if="isNotificationsMenuOpen">
             <ul x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100"
-                x-transition:leave-end="opacity-0" @click.away="closeNotificationsMenu"
+                x-transition:leave-end="opacity-0" v-click-outside="closeNotificationsMenu"
                 @keydown.escape="closeNotificationsMenu"
                 class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:text-gray-300 dark:border-gray-700 dark:bg-gray-700"
                 aria-label="submenu">
@@ -51,6 +51,7 @@
 </template>
 
 <script lang="ts">
+
 export default defineComponent({
     mounted() {
         this.$nuxtbus.on('profile-menu-open', this.closeNotificationsMenu)

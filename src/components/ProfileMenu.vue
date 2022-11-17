@@ -9,7 +9,7 @@
         </button>
         <div v-if="isProfileMenuOpen">
             <ul x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100"
-                x-transition:leave-end="opacity-0" @click.away="closeProfileMenu" @keydown.escape="closeProfileMenu"
+                x-transition:leave-end="opacity-0" v-click-outside="closeProfileMenu" @keydown.escape="closeProfileMenu"
                 class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700"
                 aria-label="submenu">
                 <li class="flex">
