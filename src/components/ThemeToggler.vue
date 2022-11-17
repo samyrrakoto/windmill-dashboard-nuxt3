@@ -23,7 +23,7 @@
 export default defineComponent({
     mounted() {
     if (localStorage.dark) {
-        this.dark = localStorage.dark;
+            this.dark = localStorage.dark;
         }
     },
     data() {
@@ -32,12 +32,12 @@ export default defineComponent({
         }
     },
     methods: {
-        toggleTheme() {
+        toggleTheme(): void {
             this.dark = !this.dark
             localStorage.dark = this.dark
-            this.$nuxtbus.emit('dark-mode-toggled', this.dark);
+            this.$nuxtbus.emit('theme-toggled', this.dark);
         },
-        getThemeFromLocalStorage() {
+        getThemeFromLocalStorage():boolean {
             if (localStorage.dark) {
                 try {
                    return JSON.parse(String(localStorage.dark))
@@ -51,7 +51,7 @@ export default defineComponent({
                 matchMedia('(prefers-color-scheme: dark)').matches
             );
         },
-        setThemeToLocalStorage(value: string) {
+        setThemeToLocalStorage(value: string): void {
             localStorage.setItem('dark', value)
         },
     },

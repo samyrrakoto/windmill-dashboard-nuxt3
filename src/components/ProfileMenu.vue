@@ -54,22 +54,16 @@
 
 <script lang="ts">
 export default defineComponent({
-    mounted() {
-        this.$nuxtbus.on('notifications-menu-open', this.closeProfileMenu)
-    },
     data() {
         return {
             isProfileMenuOpen: false,
         }
     },
     methods: {
-        toggleProfileMenu() {
+        toggleProfileMenu(): void {
             this.isProfileMenuOpen = !this.isProfileMenuOpen;
-            if (this.isProfileMenuOpen){
-                this.$nuxtbus.emit('profile-menu-open', true)
-            }
         },
-        closeProfileMenu() {
+        closeProfileMenu(): void {
             this.isProfileMenuOpen = false;
         },
     },

@@ -13,7 +13,7 @@
 <script lang="ts">
 export default defineComponent({
     mounted() {
-        this.$nuxtbus.on('dark-mode-toggled', this.toggleDarkMode)
+        this.$nuxtbus.on('theme-toggled', this.toggleDarkMode)
     },
     data() {
         return {

@@ -1,3 +1,9 @@
 import nuxtbus from 'nuxt-bus'
 
-export default defineNuxtPlugin(() => ({ provide: { nuxtbus } }))
+export default defineNuxtPlugin(() => (
+    {
+        provide: {
+            nuxtbus
+        }
+    }
+))
