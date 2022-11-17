@@ -14,7 +14,9 @@
     "nuxt": "3.0.0"
   },
   "dependencies": {
+    "chart.js": "^3.9.1",
     "click-outside-vue3": "^4.0.1",
-    "nuxt-bus": "^0.9.3"
+    "nuxt-bus": "^0.9.3",
+    "vue-chartjs": "^4.1.2"
   }
 }
