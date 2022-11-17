@@ -489,7 +489,7 @@
                     <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
                         Revenue
                     </h4>
-                    <canvas id="pie"></canvas>
+                    <doughnut-chart v-bind="doughnutConfig"></doughnut-chart>
                     <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
                         <!-- Chart legend -->
                         <div class="flex items-center">
@@ -510,7 +510,7 @@
                     <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
                         Traffic
                     </h4>
-                    <canvas id="line"></canvas>
+                    <line-chart v-bind="lineConfig"></line-chart>
                     <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
                         <!-- Chart legend -->
                         <div class="flex items-center">
@@ -529,5 +529,15 @@
 </template>
 
 <script lang="ts">
-export default defineComponent({});
+import lineConfig from '@/assets/js/chart-line-config'
+import doughnutConfig from '@/assets/js/chart-doughnut-config'
+
+export default defineComponent({
+  data() {
+    return {
+      lineConfig: lineConfig,
+      doughnutConfig: doughnutConfig,
+    }
+  },
+});
 </script>
