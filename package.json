@@ -12,5 +12,8 @@
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/tailwindcss": "^6.1.3",
     "nuxt": "3.0.0"
+  },
+  "dependencies": {
+    "nuxt-bus": "^0.9.3"
   }
 }
