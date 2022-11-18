@@ -15,7 +15,7 @@
                 :class="{ 'text-gray-800 dark:text-gray-100': element.isActive }"
             >
                 <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path v-for="path in element.svgPaths"
+                    <path v-for="path in element.svgPaths" :key="element.menu"
                         :d="path">
                     </path>
                 </svg>
