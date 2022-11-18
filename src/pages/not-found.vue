@@ -21,5 +21,14 @@
 </template>
 
 <script lang="ts">
-export default defineComponent({});
+export default defineComponent({
+  data() {
+    return {
+      title: 'Login',
+    }
+  },
+});
+definePageMeta({
+  layout: false,
+});
 </script>

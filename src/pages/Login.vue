@@ -78,5 +78,8 @@ export default defineComponent({
     }
   },
 });
+definePageMeta({
+  layout: false,
+});
 </script>
 
