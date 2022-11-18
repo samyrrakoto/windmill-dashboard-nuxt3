@@ -5,50 +5,14 @@
         Forms
       </h2>
       <!-- CTA -->
-      <NuxtLink class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
-        to="https://github.com/estevanmaito/windmill-dashboard">
-        <div class="flex items-center">
-          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-            </path>
-          </svg>
-          <span>Star this project on GitHub</span>
-        </div>
-        <span>View more &RightArrow;</span>
-      </NuxtLink>
-
+      <element-star-project></element-star-project>
       <!-- General elements -->
       <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
         Elements
       </h4>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
-        <label class="block text-sm">
-          <span class="text-gray-700 dark:text-gray-400">Name</span>
-          <input
-            class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-            placeholder="Jane Doe" />
-        </label>
-
-        <div class="mt-4 text-sm">
-          <span class="text-gray-700 dark:text-gray-400">
-            Account Type
-          </span>
-          <div class="mt-2">
-            <label class="inline-flex items-center text-gray-600 dark:text-gray-400">
-              <input type="radio"
-                class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-                name="accountType" value="personal" />
-              <span class="ml-2">Personal</span>
-            </label>
-            <label class="inline-flex items-center ml-6 text-gray-600 dark:text-gray-400">
-              <input type="radio"
-                class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-                name="accountType" value="busines" />
-              <span class="ml-2">Business</span>
-            </label>
-          </div>
-        </div>
+        <element-form-text-input :input-label="'Name'"></element-form-text-input>
+        <element-form-radio-button :radio-label="'Account Type'" :radio-inputs="radioInputs"></element-form-radio-button>
 
         <label class="block mt-4 text-sm">
           <span class="text-gray-700 dark:text-gray-400">
@@ -224,5 +188,20 @@
 </template>
 
 <script lang="ts">
-export default defineComponent({});
+export default defineComponent({
+  data() {
+    return {
+      radioInputs: [
+        {
+          label: 'Personal',
+          value: 'personal',
+        },
+        {
+          label: 'Business',
+          value: 'business',
+        }
+      ]
+    }
+  },
+});
 </script>
