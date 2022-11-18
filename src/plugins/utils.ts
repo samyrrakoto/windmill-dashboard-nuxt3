@@ -5,11 +5,11 @@ export default defineNuxtPlugin(nuxtApp => (
         provide: {
             utils: {
                 stringUtils: {
-                    toUcFirst(text: String): string {
+                    toUcFirst(text: string): string {
                         return text.charAt(0).toUpperCase() + text.slice(1)
                     },
-                    toKebabCase(menuElement: string): string {
-                        return kebabCase(menuElement)
+                    toKebabCase(text: string): string {
+                        return kebabCase(text)
                     }
                 }
             }
