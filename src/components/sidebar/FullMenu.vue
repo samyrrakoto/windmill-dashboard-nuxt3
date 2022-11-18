@@ -55,29 +55,9 @@
                             x-transition:leave-start="opacity-100 max-h-xl" x-transition:leave-end="opacity-0 max-h-0"
                             class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
                             aria-label="submenu">
-                            <li
+                            <li v-for="(page, index) in pagesMenuElements" :key="`page-${index}`"
                                 class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                                <NuxtLink class="w-full" to="./login">Login</NuxtLink>
-                            </li>
-                            <li
-                                class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                                <NuxtLink class="w-full" to="./create-account">
-                                    Create account
-                                </NuxtLink>
-                            </li>
-                            <li
-                                class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                                <NuxtLink class="w-full" to="./forgot-password">
-                                    Forgot password
-                                </NuxtLink>
-                            </li>
-                            <li
-                                class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                                <NuxtLink class="w-full" to="/not-found">404</NuxtLink>
-                            </li>
-                            <li
-                                class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                                <NuxtLink class="w-full" to="/">Blank</NuxtLink>
+                                <NuxtLink class="w-full" :to="toKebabCase(page)">{{ page }}</NuxtLink>
                             </li>
                         </ul>
                     </div>
@@ -95,6 +75,8 @@
 </template>
 
 <script lang="ts">
+import kebabCase from 'just-kebab-case';
+
 type MenuElement = {
     menu: string,
     isActive: boolean,
@@ -156,6 +138,9 @@ export default defineComponent({
                     ],
                 },
             ],
+            pagesMenuElements: [
+                "Login", "Create account", "Forgot password", "Not Found",
+            ],
             isPagesMenuOpen: false,
             activeLink: false,
         }
@@ -172,6 +157,9 @@ export default defineComponent({
         },
         excludeDashboardElement(menuElement: string): string {
             return (menuElement === "dashboard" ? "/" : menuElement)
+        },
+        toKebabCase(menuElement: string): string {
+            return kebabCase(menuElement)
         }
     },
 });
