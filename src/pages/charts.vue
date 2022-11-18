@@ -34,7 +34,7 @@
           <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
             Doughnut/Pie
           </h4>
-          <doughnut-chart v-bind="doughnutConfig"></doughnut-chart>
+          <chart-doughnut-component v-bind="doughnutConfig"></chart-doughnut-component>
           <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
             <!-- Chart legend -->
             <div class="flex items-center">
@@ -56,7 +56,7 @@
           <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
             Lines
           </h4>
-          <line-chart v-bind="lineConfig"></line-chart>
+          <chart-line-component v-bind="lineConfig"></chart-line-component>
           <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
             <!-- Chart legend -->
             <div class="flex items-center">
@@ -74,7 +74,7 @@
           <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
             Bars
           </h4>
-          <bar-chart v-bind="barConfig"></bar-chart>>
+          <chart-bar-component v-bind="barConfig"></chart-bar-component>
           <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
             <!-- Chart legend -->
             <div class="flex items-center">
