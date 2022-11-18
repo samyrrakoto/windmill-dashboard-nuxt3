@@ -3,6 +3,9 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
     ],
+    plugins: [
+        '@/plugins/utils.ts',
+    ],
     app: {
         head: {
             link: [

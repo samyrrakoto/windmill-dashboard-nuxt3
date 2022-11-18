@@ -19,7 +19,7 @@
                         :d="path">
                     </path>
                 </svg>
-                <span class="ml-4">{{ element.menu.charAt(0).toUpperCase() + element.menu.slice(1) }}</span>
+                <span class="ml-4">{{ $utils.stringUtils.toUcFirst(element.menu) }}</span>
             </NuxtLink>
         </li>
     </span>
