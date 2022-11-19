@@ -10,67 +10,13 @@
       <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
         Elements
       </h4>
+
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <element-form-text-input :input-label="'Name'"></element-form-text-input>
-        <!--<element-form-radio-button :radio-label="'Account Type'" :radio-inputs="radioInputs"></element-form-radio-button>-->
-        <!-- radio button is buggy for now, will get back to it later -->
-        <div class="mt-4 text-sm">
-                <span class="text-gray-700 dark:text-gray-400">
-                  Account Type
-                </span>
-                <div class="mt-2">
-                  <label
-                    class="inline-flex items-center text-gray-600 dark:text-gray-400"
-                  >
-                    <input
-                      type="radio"
-                      class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-                      name="accountType"
-                      value="personal"
-                    />
-                    <span class="ml-2">Personal</span>
-                  </label>
-                  <label
-                    class="inline-flex items-center ml-6 text-gray-600 dark:text-gray-400"
-                  >
-                    <input
-                      type="radio"
-                      class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-                      name="accountType"
-                      value="busines"
-                    />
-                    <span class="ml-2">Business</span>
-                  </label>
-                </div>
-              </div>
 
-        <label class="block mt-4 text-sm">
-          <span class="text-gray-700 dark:text-gray-400">
-            Requested Limit
-          </span>
-          <select
-            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-select focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
-            <option>$1,000</option>
-            <option>$5,000</option>
-            <option>$10,000</option>
-            <option>$25,000</option>
-          </select>
-        </label>
-
-        <label class="block mt-4 text-sm">
-          <span class="text-gray-700 dark:text-gray-400">
-            Multiselect
-          </span>
-          <select
-            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-multiselect focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-            multiple>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-            <option>Option 4</option>
-            <option>Option 5</option>
-          </select>
-        </label>
+        <element-form-radio-button :radio-label="'Account Type'" :radio-inputs="radioInputs"></element-form-radio-button>
+        <element-form-select-options :select-label="'Requested Limit'" :select-options="selectOptions"></element-form-select-options>
+        <element-form-select-options :select-label="'Multiple requested limits'" :select-options="selectOptions" :is-multiple="true"></element-form-select-options>
 
         <label class="block mt-4 text-sm">
           <span class="text-gray-700 dark:text-gray-400">Message</span>
@@ -232,6 +178,28 @@ export default defineComponent({
           label: 'Business',
 
         }
+      ],
+      selectOptions: [
+        {
+            value: '1000',
+            label: '$1,000',
+        },
+        {
+            value: '2000',
+            label: '$2,000',
+        },
+        {
+            value: '3000',
+            label: '$3,000',
+        },
+        {
+            value: '4000',
+            label: '$4,000',
+        },
+        {
+            value: '5000',
+            label: '$5,000',
+        },
       ]
     }
   },
