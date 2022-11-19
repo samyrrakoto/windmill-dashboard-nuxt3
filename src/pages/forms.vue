@@ -12,7 +12,37 @@
       </h4>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <element-form-text-input :input-label="'Name'"></element-form-text-input>
-        <element-form-radio-button :radio-label="'Account Type'" :radio-inputs="radioInputs"></element-form-radio-button>
+        <!--<element-form-radio-button :radio-label="'Account Type'" :radio-inputs="radioInputs"></element-form-radio-button>-->
+        <!-- radio button is buggy for now, will get back to it later -->
+        <div class="mt-4 text-sm">
+                <span class="text-gray-700 dark:text-gray-400">
+                  Account Type
+                </span>
+                <div class="mt-2">
+                  <label
+                    class="inline-flex items-center text-gray-600 dark:text-gray-400"
+                  >
+                    <input
+                      type="radio"
+                      class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                      name="accountType"
+                      value="personal"
+                    />
+                    <span class="ml-2">Personal</span>
+                  </label>
+                  <label
+                    class="inline-flex items-center ml-6 text-gray-600 dark:text-gray-400"
+                  >
+                    <input
+                      type="radio"
+                      class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                      name="accountType"
+                      value="busines"
+                    />
+                    <span class="ml-2">Business</span>
+                  </label>
+                </div>
+              </div>
 
         <label class="block mt-4 text-sm">
           <span class="text-gray-700 dark:text-gray-400">
@@ -188,17 +218,19 @@
 </template>
 
 <script lang="ts">
+
 export default defineComponent({
   data() {
     return {
       radioInputs: [
         {
-          label: 'Personal',
           value: 'personal',
+          label: 'Personal',
         },
         {
-          label: 'Business',
           value: 'business',
+          label: 'Business',
+
         }
       ]
     }

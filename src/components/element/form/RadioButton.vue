@@ -1,3 +1,4 @@
+import RadioInput from '../../../types/RadiotInput';
 <template>
     <div class="mt-4 text-sm">
         <span class="text-gray-700 dark:text-gray-400">
@@ -6,7 +7,7 @@
         <div class="mt-2">
             <label
                 class="inline-flex items-center text-gray-600 dark:text-gray-400"
-                v-for="(radio, index) in radioInputs" :key="radio.name" :class="{ 'ml-6' : index > 0 }"
+                v-for="(radio, index) in getRadioInputs" :key="radio.label" :class="{'ml-6': index > 0}"
             >
                 <input type="radio"
                     class="text-purple-600 form-radio focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
@@ -19,10 +20,6 @@
 </template>
 
 <script lang="ts">
-type RadioInput = {
-    value: String,
-    label: String,
-}
 export default defineComponent({
     props: {
         radioLabel: {
@@ -31,9 +28,15 @@ export default defineComponent({
             default : "Radio Button Label"
         },
         radioInputs: {
-            type: Object as PropType<RadioInput>,
-            required: true,
+            type: Array,
+            required: true
         }
+
     },
+    computed: {
+        getRadioInputs() {
+            return [...this.radioInputs] as RadioInput[]
+        }
+    }
 })
 </script>
