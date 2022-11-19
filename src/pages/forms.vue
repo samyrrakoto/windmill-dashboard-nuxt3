@@ -12,29 +12,12 @@
       </h4>
 
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
-        <element-form-text-input :input-label="'Name'"></element-form-text-input>
-
+        <element-form-text-input :is-first-element="true" :input-label="'Name'" :place-holder="'Uvuvwevwevwe Onyetenyevwe Ugwemuhwem Osas'"></element-form-text-input>
         <element-form-radio-button :radio-label="'Account Type'" :radio-inputs="radioInputs"></element-form-radio-button>
         <element-form-select-options :select-label="'Requested Limit'" :select-options="selectOptions"></element-form-select-options>
-        <element-form-select-options :select-label="'Multiple requested limits'" :select-options="selectOptions" :is-multiple="true"></element-form-select-options>
-
-        <label class="block mt-4 text-sm">
-          <span class="text-gray-700 dark:text-gray-400">Message</span>
-          <textarea
-            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
-            rows="3" placeholder="Enter some long form content."></textarea>
-        </label>
-
-        <div class="flex mt-6 text-sm">
-          <label class="flex items-center dark:text-gray-400">
-            <input type="checkbox"
-              class="text-purple-600 form-checkbox focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray" />
-            <span class="ml-2">
-              I agree to the
-              <span class="underline">privacy policy</span>
-            </span>
-          </label>
-        </div>
+        <element-form-select-options :is-multiple="true" :select-label="'Multiple requested limits'" :select-options="selectOptions"></element-form-select-options>
+        <element-form-text-input :isTextArea="true" :input-label="'Message'" :place-holder="'Your long text here'"></element-form-text-input>
+        <element-form-check-box :checkbox-text="checkBoxText"></element-form-check-box>
       </div>
 
       <!-- Validation inputs -->
@@ -42,44 +25,21 @@
         Validation
       </h4>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
-        <!-- Invalid input -->
-        <label class="block text-sm">
-          <span class="text-gray-700 dark:text-gray-400">
-            Invalid input
-          </span>
-          <input
-            class="block w-full mt-1 text-sm border-red-600 dark:text-gray-300 dark:bg-gray-700 focus:border-red-400 focus:outline-none focus:shadow-outline-red form-input"
-            placeholder="Jane Doe" />
-          <span class="text-xs text-red-600 dark:text-red-400">
-            Your password is too short.
-          </span>
-        </label>
-
-        <!-- Valid input -->
-        <label class="block mt-4 text-sm">
-          <span class="text-gray-700 dark:text-gray-400">
-            Valid input
-          </span>
-          <input
-            class="block w-full mt-1 text-sm border-green-600 dark:text-gray-300 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green form-input"
-            placeholder="Jane Doe" />
-          <span class="text-xs text-green-600 dark:text-green-400">
-            Your password is strong.
-          </span>
-        </label>
-
-        <!-- Helper text -->
-        <label class="block mt-4 text-sm">
-          <span class="text-gray-700 dark:text-gray-400">
-            Helper text
-          </span>
-          <input
-            class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
-            placeholder="Jane Doe" />
-          <span class="text-xs text-gray-600 dark:text-gray-400">
-            Your password must be at least 6 characters long.
-          </span>
-        </label>
+        <element-form-text-input
+          :is-invalid="true"
+          :input-label="'Invalid input'"
+          :place-holder="'Your password'"
+          :input-helper-text="'Your password is too short'"></element-form-text-input>
+        <element-form-text-input
+          :is-valid="true"
+          :input-label="'Valid Input'"
+          :place-holder="'Your password'"
+          :input-helper-text="'Your password is strong'"></element-form-text-input>
+        <element-form-text-input
+          :has-hint="true"
+          :input-label="'Helper text'"
+          :place-holder="'Your name'"
+          :input-helper-text="'Your password must be at least 6 characters long'"></element-form-text-input>
       </div>
 
       <!-- Inputs with icons -->
@@ -156,7 +116,7 @@
               class="absolute inset-y-0 right-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-r-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
               Click
             </button>
-          </div>
+          7</div>
         </label>
       </div>
     </div>
@@ -200,7 +160,8 @@ export default defineComponent({
             value: '5000',
             label: '$5,000',
         },
-      ]
+      ],
+      checkBoxText: ' I agree to the <span class=\"underline\">privacy policy</span>',
     }
   },
 });
