@@ -8,15 +8,11 @@
       <element-star-project></element-star-project>
 
       <!-- Big section cards -->
-      <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
-        Big section cards
-      </h4>
+      <content-section-title :section-title="'Big section cards'"></content-section-title>
       <element-card-big-section :content="'Large, full width sections goes here'"></element-card-big-section>
 
       <!-- Responsive cards -->
-      <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
-        Responsive cards
-      </h4>
+      <content-section-title :section-title="'Responsive cards'"></content-section-title>
       <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
         <element-card-responsive-with-icon :cardType="'totalClients'" :title="'Total clients'" :content="'6389'"></element-card-responsive-with-icon>
         <element-card-responsive-with-icon :cardType="'accountBalance'" :title="'Account balance'" :content="'$ 46,760.89'"></element-card-responsive-with-icon>
@@ -25,9 +21,7 @@
       </div>
 
       <!-- Cards with title -->
-      <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
-        Cards with title
-      </h4>
+      <content-section-title :section-title="'Cards with titles'"></content-section-title>
       <div class="grid gap-6 mb-8 md:grid-cols-2">
         <element-card-with-title
           :title="'Regular card'"

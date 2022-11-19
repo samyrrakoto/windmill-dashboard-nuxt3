@@ -19,9 +19,7 @@
       </a>
 
       <!-- With avatar -->
-      <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
-        Table with avatars
-      </h4>
+      <content-section-title :section-title="'Table with avatars'"></content-section-title>
       <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
         <div class="w-full overflow-x-auto">
           <table class="w-full whitespace-no-wrap">
@@ -396,9 +394,7 @@
       </div>
   
       <!-- With actions -->
-      <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
-        Table with actions
-      </h4>
+      <content-section-title :section-title="'Table with actions'"></content-section-title>
       <div class="w-full overflow-hidden rounded-lg shadow-xs">
         <div class="w-full overflow-x-auto">
           <table class="w-full whitespace-no-wrap">

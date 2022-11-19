@@ -27,11 +27,7 @@
       </a>
 
       <!-- Button sizes -->
-      <h4
-        class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300"
-      >
-        Sizes
-      </h4>
+      <content-section-title :section-title="'Sizes'"></content-section-title>
       <div
         class="flex flex-col flex-wrap mb-4 space-y-4 md:flex-row md:items-end md:space-x-4"
       >
@@ -93,11 +89,7 @@
       </p>
 
       <!-- Buttons with icons -->
-      <h4
-        class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300"
-      >
-        Icons
-      </h4>
+      <content-section-title :section-title="'Icons'"></content-section-title>
       <div
         class="flex flex-col flex-wrap mb-8 space-y-4 md:flex-row md:items-end md:space-x-4"
       >
