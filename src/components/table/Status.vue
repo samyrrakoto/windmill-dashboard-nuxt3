@@ -1,7 +1,7 @@
 <template>
-<span class="px-2 py-1 font-semibold leading-tight rounded-full" :class="valueClasses">
-    {{ $utils.stringUtils.toUcFirst(value) }}
-</span>
+    <span class="px-2 py-1 font-semibold leading-tight rounded-full" :class="valueClasses">
+        {{ $utils.stringUtils.toUcFirst(value) }}
+    </span>
 </template>
 <script lang="ts">
 import StatusValues from '@/types/StatusValues';
