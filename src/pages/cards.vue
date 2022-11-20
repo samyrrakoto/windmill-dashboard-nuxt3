@@ -25,12 +25,12 @@
       <div class="grid gap-6 mb-8 md:grid-cols-2">
         <element-card-with-title
           :title="'Regular card'"
-          :content="lipsum"
+          :content="$utils.stringUtils.lipsum()"
         >
         </element-card-with-title>
         <element-card-with-title
           :title="'Colored card'"
-          :content="lipsum"
+          :content="$utils.stringUtils.lipsum()"
           :bgColor="'bg-purple-600'"
           :textColor="'text-white'"
         >
@@ -41,12 +41,5 @@
 </template>
 
 <script lang="ts">
-export default defineComponent({
-  data() {
-    return {
-      lipsum: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, cum commodi a omnis numquam quod? Totam exercitationem quos hic ipsam at qui cum numquam, sed amet ratione! Ratione",
-    }
-  },
-});
-
+export default defineComponent({});
 </script>
