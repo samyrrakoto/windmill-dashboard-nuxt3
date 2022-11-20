@@ -13,10 +13,10 @@
 
 <script lang="ts">
 type CardDesign = {
-    twClass: String,
-    svgPath: String,
-    clipRule: String,
-    fillRule: String,
+    twClass: string,
+    svgPath: string,
+    clipRule: string,
+    fillRule: string,
 }
 export default defineComponent({
     data() {
