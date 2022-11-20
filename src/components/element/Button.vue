@@ -60,7 +60,7 @@ export default defineComponent({
     props: {
         buttonText: {
             type: String,
-            required: false,
+            
             default: '',
         },
         size: {
@@ -69,42 +69,42 @@ export default defineComponent({
         },
         isDisabled: {
             type: Boolean,
-            required: false,
+            
             default: false,
         },
         isBlockLevel: {
             type: Boolean,
-            required: false,
+            
             default: false,
         },
         hasIconLeft: {
             type: Boolean,
-            required: false,
+            
             default: false,
         },
         hasIconRight: {
             type: Boolean,
-            required: false,
+            
             default: false,
         },
         iconOnly: {
             type: Boolean,
-            required: false,
+            
             default: false,
         },
         isSvgEvenOdd: {
             type: Boolean,
-            required: false,
+            
             default: false,
         },
         isRounded: {
             type: Boolean,
-            required: false,
+            
             default: false,
         },
         iconType: {
             type: String,
-            required: false,
+            
             default: 'heart',
         }
     },

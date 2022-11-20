@@ -53,22 +53,22 @@ export default defineComponent({
     props: {
         header: {
             type: String,
-            required: false,
+            
             default: ''
         },
         content: {
             type: String,
-            required: false,
+            
             default: ''
         },
         cancel: {
             type: String,
-            required: false,
+            
             default: ''
         },
         ack:  {
             type: String,
-            required: false,
+            
             default: ''
         },
     },

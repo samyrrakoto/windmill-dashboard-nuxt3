@@ -18,7 +18,6 @@ export default defineComponent({
     props: {
         selectLabel: {
             type: String,
-            required: false,
             default : "Select Input",
         },
         selectOptions: {
@@ -27,7 +26,6 @@ export default defineComponent({
         },
         isMultiple: {
             type: Boolean,
-            required: false,
             default: false,
         }
     },

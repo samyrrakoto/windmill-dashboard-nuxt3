@@ -22,17 +22,17 @@ export default defineComponent({
         },
         titleColor: {
             type: String,
-            required: false,
+            
             default: 'dark:bg-gray-800'
         },
         textColor: {
             type: String,
-            required: false,
+            
             default: 'dark:bg-gray-800'
         },
         bgColor: {
             type: String,
-            required: false,
+            
             default: 'bg-white',
         }
     },

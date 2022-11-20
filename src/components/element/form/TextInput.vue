@@ -71,62 +71,50 @@ export default defineComponent({
     props: {
         inputLabel: {
             type: String,
-            required: false,
             default: "Text Label"
         },
         placeHolder: {
             type: String,
-            required: false,
             default: "Your text here",
         },
         isTextArea: {
             type: Boolean,
-            required: false,
             default: false,
         },
         isInvalid: {
             type: Boolean,
-            required: false,
             default: false,
         },
         isValid: {
             type: Boolean,
-            required: false,
             default: false,
         },
         hasHint: {
             type: Boolean,
-            required: false,
             default: false,
         },
         inputHelperText: {
             type: String,
-            required: false,
             default: "Hint text"
         },
         isFirstElement: {
             type: Boolean,
-            required: false,
             default: false,
         },
         hasIconLeft: {
             type: Boolean,
-            required: false,
             default: false,
         },
         hasIconRight: {
             type: Boolean,
-            required: false,
             default: false,
         },
         hasButtonLeft: {
             type: Boolean,
-            required: false,
             default: false,
         },
         hasButtonRight: {
             type: Boolean,
-            required: false,
             default: false,
         }
     }

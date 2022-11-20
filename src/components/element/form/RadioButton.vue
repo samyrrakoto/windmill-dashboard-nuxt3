@@ -23,7 +23,6 @@ export default defineComponent({
     props: {
         radioLabel: {
             type: String,
-            required: false,
             default : "Radio Button Label"
         },
         radioInputs: {
