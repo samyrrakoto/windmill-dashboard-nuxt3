@@ -1,9 +1,6 @@
-/**
- * For usage, visit Chart.js docs https://www.chartjs.org/docs/latest/
- */
 const lineConfig = {
-  type: 'line',
-  data: {
+  chartType: 'Line',
+  chartData: {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
       {
@@ -30,7 +27,7 @@ const lineConfig = {
       },
     ],
   },
-  options: {
+  chartOptions: {
     responsive: true,
     /**
      * Default legends are ugly and impossible to style.
@@ -65,5 +62,4 @@ const lineConfig = {
     },
   },
 }
-
-export default lineConfig;
+export default lineConfig

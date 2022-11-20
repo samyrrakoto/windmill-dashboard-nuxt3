@@ -23,9 +23,9 @@
 </template>
 
 <script lang="ts">
-import lineConfig from '@/assets/js/chart-line-config'
-import doughnutConfig from '@/assets/js/chart-doughnut-config'
-import tableData from '@/assets/js/table-data'
+import lineConfig from '@/utils/charts-lines'
+import doughnutConfig from '@/utils/charts-doughtnuts'
+import tableData from '@/utils/table-data'
 
 export default defineComponent({
   data() {

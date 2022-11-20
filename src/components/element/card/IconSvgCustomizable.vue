@@ -12,12 +12,6 @@
 </template>
 
 <script lang="ts">
-type CardDesign = {
-    twClass: string,
-    svgPath: string,
-    clipRule: string,
-    fillRule: string,
-}
 export default defineComponent({
     data() {
         return {

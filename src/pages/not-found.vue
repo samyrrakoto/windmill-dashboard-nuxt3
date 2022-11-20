@@ -25,9 +25,10 @@ export default defineComponent({
   data() {
     return {
       title: 'Login',
-    }
-  },
+      }
+    },
 });
+
 definePageMeta({
   layout: false,
 });

@@ -11,10 +11,6 @@
     </li>
 </template>
 <script lang="ts">
-type NotificationMenu = {
-    type: string,
-    amount: number
-}
 export default defineComponent({
     data() {
         return {

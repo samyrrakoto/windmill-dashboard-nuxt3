@@ -1,11 +1,11 @@
 <template>
-<li>
-    <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple" :class="directionClasses" :aria-label="direction">
-        <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-            <path :d="directionPaths[direction]" clip-rule="evenodd" fill-rule="evenodd"></path>
-        </svg>
-    </button>
-</li>
+    <li>
+        <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple" :class="directionClasses" :aria-label="direction">
+            <svg aria-hidden="true" class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <path :d="directionPaths[direction]" clip-rule="evenodd" fill-rule="evenodd"></path>
+            </svg>
+        </button>
+    </li>
 </template>
 <script lang="ts">
 export default defineComponent({

@@ -1,9 +1,6 @@
-/**
- * For usage, visit Chart.js docs https://www.chartjs.org/docs/latest/
- */
 const barConfig = {
-  type: 'bar',
-  data: {
+  chartType: 'Bar',
+  chartData: {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
       {
@@ -22,11 +19,11 @@ const barConfig = {
       },
     ],
   },
-  options: {
+  chartOptions: {
     responsive: true,
     legend: {
       display: false,
     },
   },
 }
-export default barConfig;
+export default barConfig

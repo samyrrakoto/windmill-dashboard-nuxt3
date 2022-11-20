@@ -1,9 +1,6 @@
-/**
- * For usage, visit Chart.js docs https://www.chartjs.org/docs/latest/
- */
-const pieConfig = {
-  type: 'doughnut',
-  data: {
+const doughnutConfig = {
+  chartType: 'Doughnut',
+  chartData: {
     datasets: [
       {
         data: [33, 33, 33],
@@ -17,7 +14,7 @@ const pieConfig = {
     ],
     labels: ['Shoes', 'Shirts', 'Bags'],
   },
-  options: {
+  chartOptions: {
     responsive: true,
     cutoutPercentage: 80,
     /**
@@ -29,5 +26,4 @@ const pieConfig = {
     },
   },
 }
-
-export default pieConfig;
+export default doughnutConfig

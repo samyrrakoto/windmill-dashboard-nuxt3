@@ -16,9 +16,9 @@
 </template>
 
 <script lang="ts">
-import barConfig from '@/assets/js/chart-bar-config'
-import lineConfig from '@/assets/js/chart-line-config'
-import doughnutConfig from '@/assets/js/chart-doughnut-config'
+import barConfig from '@/utils/charts-bars'
+import lineConfig from '@/utils/charts-lines'
+import doughnutConfig from '@/utils/charts-doughtnuts'
 
 export default defineComponent({
   data() {
