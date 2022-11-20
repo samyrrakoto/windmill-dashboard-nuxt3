@@ -1,5 +1,5 @@
 const doughnutConfig = {
-    type: 'doughnut',
+    chartType: 'Doughnut',
     chartData: {
       datasets: [
         {

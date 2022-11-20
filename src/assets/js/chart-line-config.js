@@ -1,5 +1,5 @@
  const lineConfig = {
-    type: 'line',
+    chartType: 'Line',
     chartData: {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [

@@ -405,7 +405,7 @@
                     <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
                         Revenue
                     </h4>
-                    <chart-doughnut-component v-bind="doughnutConfig"></chart-doughnut-component>
+                    <chart-canvas v-bind="doughnutConfig"></chart-canvas>
                     <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
                         <!-- Chart legend -->
                         <div class="flex items-center">
@@ -426,7 +426,7 @@
                     <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
                         Traffic
                     </h4>
-                    <chart-line-component v-bind="lineConfig"></chart-line-component>
+                    <chart-canvas v-bind="lineConfig"></chart-canvas>
                     <div class="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
                         <!-- Chart legend -->
                         <div class="flex items-center">

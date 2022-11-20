@@ -10,7 +10,7 @@ const chartProps = {
     },
     chartId: {
         type: String,
-        default: 'bar-chart'
+        default: ''
     },
     width: {
         type: Number,
@@ -31,6 +31,9 @@ const chartProps = {
     plugins: {
         type: Object,
         default: () => {}
+    },
+    chartType: {
+        type: String,
     }
 }
 export default chartProps

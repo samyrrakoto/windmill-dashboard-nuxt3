@@ -1,5 +1,5 @@
 const barConfig = {
-    type: 'bar',
+    chartType: 'Bar',
     chartData: {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
