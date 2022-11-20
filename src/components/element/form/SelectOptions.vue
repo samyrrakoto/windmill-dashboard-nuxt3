@@ -22,7 +22,7 @@ export default defineComponent({
             default : "Select Input",
         },
         selectOptions: {
-            type: Array,
+            type: Object as PropType<FormValueLabel>,
             required: true,
         },
         isMultiple: {
@@ -33,7 +33,7 @@ export default defineComponent({
     },
     computed: {
         getSelectOptions() {
-            return [...this.selectOptions] as FormValueLabel[]
+            return [...this.selectOptions]
         }
     }
 })

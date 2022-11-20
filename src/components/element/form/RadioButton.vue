@@ -27,14 +27,13 @@ export default defineComponent({
             default : "Radio Button Label"
         },
         radioInputs: {
-            type: Array,
+            type: Object as PropType<FormValueLabel>,
             required: true
         }
-
     },
     computed: {
         getRadioInputs() {
-            return [...this.radioInputs] as FormValueLabel[]
+            return [...this.radioInputs]
         }
     }
 })

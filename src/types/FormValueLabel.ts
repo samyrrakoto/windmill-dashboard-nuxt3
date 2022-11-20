@@ -3,4 +3,4 @@ type FormValueLabel = {
     label: String,
   }
 
-  export default FormValueLabel
+export default FormValueLabel
