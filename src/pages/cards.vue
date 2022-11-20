@@ -1,7 +1,6 @@
 <template>
   <div>
     <content-page-title :page-title="'Cards'"></content-page-title>
-    <!-- CTA -->
     <element-star-project></element-star-project>
 
     <!-- Big section cards -->

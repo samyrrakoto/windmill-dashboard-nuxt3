@@ -1,7 +1,6 @@
 <template>
-  <div class="container px-6 mx-auto grid">
+  <div>
     <content-page-title :page-title="'Charts'"></content-page-title>
-
     <element-star-project></element-star-project>
 
     <p class="mb-8 text-gray-600 dark:text-gray-400">

@@ -1,7 +1,6 @@
 <template>
   <div>
     <content-page-title :page-title="'Buttons'"></content-page-title>
-    <!-- CTA -->
     <element-star-project></element-star-project>
 
     <!-- Button sizes -->
