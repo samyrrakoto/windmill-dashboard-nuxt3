@@ -1,9 +1,7 @@
 <template>
   <main class="h-full overflow-y-auto">
     <div class="container grid px-6 mx-auto">
-      <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-        Buttons
-      </h2>
+      <content-page-title :page-title="'Buttons'"></content-page-title>
       <!-- CTA -->
       <element-star-project></element-star-project>
 
