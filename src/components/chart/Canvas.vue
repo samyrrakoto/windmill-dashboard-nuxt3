@@ -11,7 +11,7 @@
       :width="width"
       :height="height"
     ></component>
-  </template>
+</template>
 
 <script>
 import { Doughnut, Bar, Line } from 'vue-chartjs'
