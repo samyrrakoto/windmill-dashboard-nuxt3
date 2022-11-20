@@ -1,4 +1,3 @@
-import { Title } from '../../../.nuxt/components';
 <template>
     <div class="flex items-center text-sm">
         <!-- Avatar with inset shadow -->
@@ -30,7 +29,7 @@ export default defineComponent({
     },
     title: {
         type: String,
-        default: "Living meme"
+        default: "Living Meme"
     }
   }
 });
