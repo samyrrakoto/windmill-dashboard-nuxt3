@@ -9,7 +9,7 @@
 
     <!-- Responsive cards -->
     <content-section-title :section-title="'Responsive cards'"></content-section-title>
-    <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
+    <div :class="cardContainersClass" class="xl:grid-cols-4">
       <element-card-responsive-with-icon :cardType="'totalClients'" :title="'Total clients'" :content="'6389'"></element-card-responsive-with-icon>
       <element-card-responsive-with-icon :cardType="'accountBalance'" :title="'Account balance'" :content="'$ 46,760.89'"></element-card-responsive-with-icon>
       <element-card-responsive-with-icon :cardType="'newSales'" :title="'New sales'" :content="'376'"></element-card-responsive-with-icon>
@@ -18,23 +18,19 @@
 
     <!-- Cards with title -->
     <content-section-title :section-title="'Cards with titles'"></content-section-title>
-    <div class="grid gap-6 mb-8 md:grid-cols-2">
-      <element-card-with-title
-        :title="'Regular card'"
-        :content="$utils.stringUtils.lipsum()"
-      >
-      </element-card-with-title>
-      <element-card-with-title
-        :title="'Colored card'"
-        :content="$utils.stringUtils.lipsum()"
-        :bgColor="'bg-purple-600'"
-        :textColor="'text-white'"
-      >
-      </element-card-with-title>
+    <div :class="cardContainersClass">
+      <element-card-with-title :title="'Regular card'" :content="$utils.stringUtils.lipsum()"></element-card-with-title>
+      <element-card-with-title :title="'Colored card'" :content="$utils.stringUtils.lipsum()" :bgColor="'bg-purple-600'" :textColor="'text-white'"></element-card-with-title>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-export default defineComponent({});
+export default defineComponent({
+  data() {
+    return {
+      cardContainersClass: 'grid gap-6 mb-8 md:grid-cols-2'
+    }
+  },
+});
 </script>

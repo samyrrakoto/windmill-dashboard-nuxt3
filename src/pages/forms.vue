@@ -17,21 +17,9 @@
     <!-- Validation inputs -->
     <content-section-title :section-title="'Validation'"></content-section-title>
     <div :class="sectionWrapperClass">
-      <element-form-text-input
-        :is-invalid="true"
-        :input-label="'Invalid input'"
-        :place-holder="'Your password'"
-        :input-helper-text="'Your password is too short'"></element-form-text-input>
-      <element-form-text-input
-        :is-valid="true"
-        :input-label="'Valid Input'"
-        :place-holder="'Your password'"
-        :input-helper-text="'Your password is strong'"></element-form-text-input>
-      <element-form-text-input
-        :has-hint="true"
-        :input-label="'Helper text'"
-        :place-holder="'Your name'"
-        :input-helper-text="'Your password must be at least 6 characters long'"></element-form-text-input>
+      <element-form-text-input :is-invalid="true" :input-label="'Invalid input'" :place-holder="'Your password'" :input-helper-text="'Your password is too short'"></element-form-text-input>
+      <element-form-text-input :is-valid="true" :input-label="'Valid Input'" :place-holder="'Your password'" :input-helper-text="'Your password is strong'"></element-form-text-input>
+      <element-form-text-input :has-hint="true" :input-label="'Helper text'" :place-holder="'Your name'" :input-helper-text="'Your password must be at least 6 characters long'"></element-form-text-input>
     </div>
 
     <!-- Inputs with icons -->
@@ -56,37 +44,15 @@ export default defineComponent({
   data() {
     return {
       radioInputs: [
-        {
-          value: 'personal',
-          label: 'Personal',
-        },
-        {
-          value: 'business',
-          label: 'Business',
-
-        }
+        { value: 'personal', label: 'Personal' },
+        { value: 'business', label: 'Business' },
       ],
       selectOptions: [
-        {
-            value: '1000',
-            label: '$1,000',
-        },
-        {
-            value: '2000',
-            label: '$2,000',
-        },
-        {
-            value: '3000',
-            label: '$3,000',
-        },
-        {
-            value: '4000',
-            label: '$4,000',
-        },
-        {
-            value: '5000',
-            label: '$5,000',
-        },
+        { value: '1000', label: '$1,000' },
+        { value: '2000', label: '$2,000' },
+        { value: '3000', label: '$3,000' },
+        { value: '4000', label: '$4,000' },
+        { value: '5000', label: '$5,000' },
       ],
       checkBoxText: 'I agree to the privacy policy',
       sectionWrapperClass: 'px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800'
