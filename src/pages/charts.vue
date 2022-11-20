@@ -8,9 +8,9 @@
     </p>
 
     <div class="grid gap-6 mb-8 md:grid-cols-2">
-      <chart-container :title="'Doughtnut / Pie'" :chart-config="doughnutConfig"></chart-container>
-      <chart-container :title="'Line'" :chart-config="lineConfig"></chart-container>
-      <chart-container :title="'Bar'" :chart-config="barConfig"></chart-container>
+      <chart-wrapper :title="'Doughtnut / Pie'" :chart-config="doughnutConfig"></chart-wrapper>
+      <chart-wrapper :title="'Line'" :chart-config="lineConfig"></chart-wrapper>
+      <chart-wrapper :title="'Bar'" :chart-config="barConfig"></chart-wrapper>
     </div>
   </div>
 </template>

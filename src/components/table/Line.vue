@@ -12,8 +12,8 @@
         <td :class="columnClass" class="text-sm">
             {{ date }}
         </td>
-        <td :class="columnClass" v-if="hasAction">
-            <div class="flex items-center space-x-4 text-sm">
+        <td :class="columnClass">
+            <div class="flex items-center space-x-4 text-sm" v-if="hasAction">
                 <table-action :action-type="'edit'"></table-action>
                 <table-action :action-type="'delete'"></table-action>
              </div>
