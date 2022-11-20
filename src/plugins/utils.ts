@@ -10,6 +10,9 @@ export default defineNuxtPlugin(nuxtApp => (
                     },
                     toKebabCase(text: string): string {
                         return kebabCase(text)
+                    },
+                    lipsum(): string {
+                        return "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, cum commodi a omnis numquam quod? Totam exercitationem quos hic ipsam at qui cum numquam, sed amet ratione! Ratione"
                     }
                 }
             }
