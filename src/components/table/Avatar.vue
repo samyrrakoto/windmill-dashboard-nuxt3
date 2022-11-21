@@ -5,7 +5,7 @@
             <img
                 class="object-cover w-full h-full rounded-full"
                 :src="'/_nuxt/assets/img/avatar/' + picture"
-                :alt="fullName + ' - ' + title"
+                :alt="`${fullName} - ${title}`"
                 loading="lazy"
             />
             <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
