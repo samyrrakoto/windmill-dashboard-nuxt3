@@ -2,7 +2,7 @@
     <span v-for="element in menuElements" :key="element.menu" >
         <li
             class="relative px-6 py-3"
-            @click="toggleSelectedElement(element)"
+            @click="closeMobileSideMenu(), toggleSelectedElement(element)"
         >
             <span
                 v-if="element.isActive"
@@ -26,6 +26,8 @@
 </template>
 
 <script lang="ts">
+import { useLayoutStore } from '@/stores/LayoutStore';
+
 type MenuElement = {
     menu: string,
     isActive: boolean,
@@ -99,12 +101,12 @@ export default defineComponent({
         }
     },
     methods: {
+        ...mapActions(useLayoutStore, ['closeMobileSideMenu']),
         toggleSelectedElement(menuElement: MenuElement): void {
             this.menuElements.forEach(menu => {
                 menu.isActive = false;
             });
             menuElement.isActive = true;
-            this.$nuxtbus.emit('side-menu-close', true);
         },
         excludeDashboardElement(menuElement: string): string {
             return (menuElement === "dashboard" ? "/" : menuElement)

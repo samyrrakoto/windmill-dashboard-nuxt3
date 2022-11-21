@@ -17,24 +17,10 @@
 </template>
 
 <script lang="ts">
+import { useLayoutStore } from '@/stores/LayoutStore';
 export default defineComponent({
-    mounted() {
-        this.$nuxtbus.on('side-menu-toggled', this.toggleMobileSideMenu)
-        this.$nuxtbus.on('side-menu-close', this.toggleMobileSideMenu)
-    },
-    data() {
-        return {
-            isMobileSideMenuOpen: false,
-        }
-    },
-    methods: {
-        toggleMobileSideMenu() {
-            this.isMobileSideMenuOpen = !this.isMobileSideMenuOpen
-            this.$nuxtbus.emit('side-menu-toggled', this.isMobileSideMenuOpen);
-        },
-        closeMobileSideMenu() {
-            this.isMobileSideMenuOpen = false
-        }
+    computed: {
+        ...mapState(useLayoutStore, ['isMobileSideMenuOpen']),
     },
 });
 </script>

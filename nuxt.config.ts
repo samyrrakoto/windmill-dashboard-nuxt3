@@ -2,6 +2,17 @@
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
+        [
+            '@pinia/nuxt',
+            {
+              autoImports: [
+                'defineStore',
+                ['defineStore', 'definePiniaStore'],
+                'mapState',
+                'mapActions',
+              ],
+            },
+        ],
     ],
     plugins: [
         '@/plugins/utils.ts',
