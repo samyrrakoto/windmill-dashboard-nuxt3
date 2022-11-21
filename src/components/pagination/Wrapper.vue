@@ -8,7 +8,7 @@
                 <ul class="inline-flex items-center">
                     <pagination-swtich-page-button :direction="'previous'"></pagination-swtich-page-button>
                     <pagination-page-button v-for="n in totalPages - 7" :key="n" :page="n" :current-page="currentPage"></pagination-page-button>
-                    <pagination-page-button :page="'...'"></pagination-page-button>
+                    <pagination-page-button :page="0"></pagination-page-button>
                     <pagination-page-button v-for="n in totalPages - 7" :key="n" :page="n + 6" :current-page="currentPage"></pagination-page-button>
                     <pagination-swtich-page-button :direction="'next'"></pagination-swtich-page-button>
                 </ul>
