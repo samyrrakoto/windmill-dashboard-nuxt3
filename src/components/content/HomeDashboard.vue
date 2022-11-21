@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container grid">
         <content-page-title :page-title="'Dashboard'"></content-page-title>
         <element-star-project></element-star-project>
         <!-- Cards -->

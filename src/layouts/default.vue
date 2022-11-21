@@ -2,10 +2,10 @@
     <Html lang="en" class="windmill-dashboard" :class="{ 'theme-dark': dark }"></Html>
     <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{'overflow-hidden': isSideMenuOpen }">
         <sidebar-content-wrapper></sidebar-content-wrapper>
-        <div class="flex flex-col flex-1">
+        <div class="flex flex-col flex-1 w-full">
             <header-content-wrapper></header-content-wrapper>
             <main class="h-full pb-16 overflow-y-auto">
-                <div class="container grid px-6 mx-auto">
+                <div class="container px-6 mx-auto grid">
                     <slot />
                 </div>
             </main>
