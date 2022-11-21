@@ -1,6 +1,6 @@
 <template>
-    <content-custom-html :dark="dark"></content-custom-html>
     <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isMobileSideMenuOpen }">
+        <content-custom-html :dark="dark"></content-custom-html>
         <sidebar-wrapper></sidebar-wrapper>
         <div class="flex flex-col flex-1 w-full">
             <header-content-wrapper></header-content-wrapper>
@@ -12,7 +12,6 @@
         </div>
     </div>
 </template>
-
 
 <script lang="ts">
 import layoutSetup from '@/utils/layout-setup'
