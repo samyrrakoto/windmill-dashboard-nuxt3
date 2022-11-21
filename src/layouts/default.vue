@@ -1,5 +1,5 @@
 <template>
-    <Html lang="en" class="windmill-dashboard" :class="{ 'theme-dark': dark }"></Html>
+    <content-custom-html :dark="dark"></content-custom-html>
     <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isMobileSideMenuOpen }">
         <sidebar-wrapper></sidebar-wrapper>
         <div class="flex flex-col flex-1 w-full">
@@ -15,11 +15,6 @@
 
 
 <script lang="ts">
-import { useLayoutStore } from '@/stores/LayoutStore';
-
-export default defineComponent({
-    computed: {
-        ...mapState(useLayoutStore, ['dark', 'isMobileSideMenuOpen'])
-    }
-});
+import layoutSetup from '@/utils/layout-setup'
+export default layoutSetup
 </script>

@@ -30,6 +30,6 @@ export default defineComponent({
 });
 
 definePageMeta({
-  layout: false,
+  layout: 'non-auth-layout',
 });
 </script>
