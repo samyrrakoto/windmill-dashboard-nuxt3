@@ -4,7 +4,7 @@
         <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
             <img
                 class="object-cover w-full h-full rounded-full"
-                :src="'/_nuxt/assets/img/avatar/' + picture"
+                :src="`/_nuxt/assets/img/avatar/${picture}`"
                 :alt="`${fullName} - ${title}`"
                 loading="lazy"
             />
