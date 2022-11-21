@@ -104,6 +104,7 @@ export default defineComponent({
                 menu.isActive = false;
             });
             menuElement.isActive = true;
+            this.$nuxtbus.emit('side-menu-close', true);
         },
         excludeDashboardElement(menuElement: string): string {
             return (menuElement === "dashboard" ? "/" : menuElement)
