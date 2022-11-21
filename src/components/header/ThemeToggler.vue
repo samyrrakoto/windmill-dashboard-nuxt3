@@ -1,7 +1,7 @@
 <template>
     <!-- Theme toggler -->
     <li class="flex">
-        <button class="rounded-md focus:outline-none focus:shadow-outline-purple" @click="toggleTheme"
+        <button class="rounded-md focus:outline-none focus:shadow-outline-purple" @click="toggleTheme()"
             aria-label="Toggle color mode">
             <div v-if="!dark">
                 <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
@@ -20,39 +20,21 @@
 </template>
 
 <script lang="ts">
+import { useLayoutStore } from '@/stores/LayoutStore';
 export default defineComponent({
-    mounted() {
-    if (localStorage.dark) {
-            this.dark = localStorage.dark;
+    beforeMount() {
+        if (localStorage.dark === 'true') {
+            this.setDark(Boolean(localStorage.dark))
         }
     },
-    data() {
-        return {
-            dark: true,
-        }
+    computed: {
+        ...mapState(useLayoutStore, ['dark'])
     },
     methods: {
+        ...mapActions(useLayoutStore, ['setDark', 'toggleDark']),
         toggleTheme(): void {
-            this.dark = !this.dark
+            this.toggleDark()
             localStorage.dark = this.dark
-            this.$nuxtbus.emit('theme-toggled', this.dark);
-        },
-        getThemeFromLocalStorage():boolean {
-            if (localStorage.dark) {
-                try {
-                   return JSON.parse(String(localStorage.dark))
-                } catch(e) {
-                    console.log(e);
-                }
-            }
-
-            return (
-                !!matchMedia &&
-                matchMedia('(prefers-color-scheme: dark)').matches
-            );
-        },
-        setThemeToLocalStorage(value: string): void {
-            localStorage.setItem('dark', value)
         },
     },
 });

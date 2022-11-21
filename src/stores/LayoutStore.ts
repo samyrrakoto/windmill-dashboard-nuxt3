@@ -12,6 +12,9 @@ export const useLayoutStore = defineStore('layout', {
         toggleDark() {
             this.dark = !this.dark
         },
+        setDark(dark: boolean) {
+            this.dark = dark
+        },
         toggleMobileSideMenu() {
             this.isMobileSideMenuOpen = !this.isMobileSideMenuOpen
         },
