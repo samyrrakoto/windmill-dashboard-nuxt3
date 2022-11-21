@@ -9,6 +9,7 @@
                     class="block w-full mt-1 text-sm form-input"
                     :class="textInputClasses, buttonInputClasses"
                     :placeholder="placeHolder"
+                    :type="type"
                 />
                 <button v-if="(hasButtonLeft || hasButtonRight)"
                     class="absolute inset-y-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent  active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
@@ -80,6 +81,10 @@ export default defineComponent({
         isTextArea: {
             type: Boolean,
             default: false,
+        },
+        type: {
+            type: String,
+            default: '',
         },
         isInvalid: {
             type: Boolean,
