@@ -1,7 +1,6 @@
 export default defineEventHandler((event) =>{
     function redirect(to: string){
-        event.node.res.writeHead(301, { Location: to })
-        event.node.res.end()
+        this.$router.push(to)
     }
     switch(event.node.req.url){
         case '/' :
