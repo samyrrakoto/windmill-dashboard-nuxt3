@@ -3,13 +3,7 @@
 </template>
 
 <script lang="ts">
-export default defineComponent({
-  data() {
-    return {
-      title: 'Login',
-    }
-  },
-});
+export default defineComponent({});
 definePageMeta({
   layout: 'non-auth-layout',
 });
