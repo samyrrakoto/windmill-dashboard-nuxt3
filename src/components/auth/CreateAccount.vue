@@ -16,7 +16,7 @@
                 <hr class="my-8" />
 
                 <auth-social-login></auth-social-login>
-                <auth-helper-link class="mt-4" :text="'Already have an account ? Login here'" :to="'/'"></auth-helper-link>
+                <auth-helper-link class="mt-4" :text="'Already have an account ? Login here'" :to="'/login'"></auth-helper-link>
             </div>
         </div>
 </template>

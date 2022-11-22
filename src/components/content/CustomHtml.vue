@@ -3,12 +3,19 @@
 </template>
 
 <script lang="ts">
+import { useLayoutStore } from '@/stores/LayoutStore';
+
 export default defineComponent({
-    props: {
-        dark: {
-            type: Boolean,
-            default: false
+    mounted() {
+        if (String(localStorage.getItem('dark')) === 'true'){
+            this.setDark(true)
         }
+    },
+    computed: {
+        ...mapState(useLayoutStore, ['dark'])
+    },
+    methods: {
+        ...mapActions(useLayoutStore, ['setDark'])
     }
-})
+});
 </script>
