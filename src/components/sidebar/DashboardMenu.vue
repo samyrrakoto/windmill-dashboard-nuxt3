@@ -1,27 +1,28 @@
 <template>
     <span v-for="element in menuElements" :key="element.menu" >
-        <li
-            class="relative px-6 py-3"
-            @click="closeMobileSideMenu(), toggleSelectedElement(element)"
-        >
-            <span
-                v-if="element.isActive"
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                aria-hidden="true"
-            ></span>
-            <NuxtLink
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                :to="menuRoot + element.menu"
-                :class="{ 'text-gray-800 dark:text-gray-100': element.isActive }"
+        <NuxtLink :to="menuRoot + element.menu">
+            <li
+                class="relative px-6 py-3"
+                @click="closeMobileSideMenu(), toggleSelectedElement(element)"
             >
-                <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path v-for="path in element.svgPaths" :key="element.menu"
-                        :d="path">
-                    </path>
-                </svg>
-                <span class="ml-4">{{ $utils.stringUtils.toUcFirst(element.menu) }}</span>
-            </NuxtLink>
-        </li>
+                <span
+                    v-if="element.isActive"
+                    class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                    aria-hidden="true"
+                ></span>
+                <span
+                    class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    :class="{ 'text-gray-800 dark:text-gray-100': element.isActive }"
+                >
+                    <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path v-for="path in element.svgPaths" :key="element.menu"
+                            :d="path">
+                        </path>
+                    </svg>
+                    <span class="ml-4">{{ $utils.stringUtils.toUcFirst(element.menu) }}</span>
+                </span>
+            </li>
+        </NuxtLink>
     </span>
 </template>
 
