@@ -27,7 +27,7 @@
                 aria-label="submenu">
                 <li v-for="(page, index) in pagesMenuElements" :key="`page-${index}`"
                     class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                    <NuxtLink class="w-full" :to="$utils.stringUtils.toKebabCase(page)">{{ page }}</NuxtLink>
+                    <NuxtLink class="w-full" :to="`/${$utils.stringUtils.toKebabCase(page)}`">{{ page }}</NuxtLink>
                 </li>
             </ul>
         </div>

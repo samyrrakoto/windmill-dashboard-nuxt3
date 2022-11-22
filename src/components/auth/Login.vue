@@ -7,7 +7,7 @@
             <element-form-text-input :input-label="'Password'" :place-holder="'*********'" :type="'password'"></element-form-text-input>
 
             <div class="w-full mt-4">
-                    <element-button :button-text="'Create account'" :size="'regular'" :is-block-level="true"></element-button>
+                <element-button :button-text="'Log in'" :size="'regular'" :is-block-level="true" v-on:click="$router.push('/admin/dashboard')"></element-button>
             </div>
 
             <hr class="my-8" />
