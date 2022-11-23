@@ -8,6 +8,9 @@
             <div class="w-full mt-4">
                 <element-button :button-text="'Log in'" :size="'regular'" :is-block-level="true" :has-hint="true" :input-helper-text="'Just click here to enter the dashboard, there is no login system'" v-on:click="$router.push('/admin/dashboard')" />
             </div>
+            <div class="w-full mt-3 text-[10px] text-center text-slate-400 dark:text-zinc-200">
+               (Just click "Log in" without credentials to access the dashboard, as there is no auth system implemented)
+            </div>
             <hr class="my-8" />
             <auth-social-login></auth-social-login>
             <auth-helper-link class="mt-4" :text="'Forgot your password ?'" :to="'/forgot-password'" />

@@ -10,6 +10,9 @@
             <div class="w-full mt-4">
                 <element-button :button-text="'Create account'" :size="'regular'" :is-block-level="true" />
             </div>
+            <div class="w-full mt-3 text-[10px] text-center text-slate-400 dark:text-zinc-200">
+               (You don't actually need to create an account, as there is no auth system implemented)
+            </div>
             <hr class="my-8" />
             <auth-social-login />
             <auth-helper-link class="mt-4" :text="'Already have an account ? Login here'" :to="'/login'" />

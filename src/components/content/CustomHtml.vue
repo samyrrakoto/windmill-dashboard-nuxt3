@@ -6,7 +6,7 @@
 import { useLayoutStore } from '@/stores/LayoutStore';
 
 export default defineComponent({
-    mounted() {
+    beforeMount() {
         if (String(localStorage.getItem('dark')) === 'true'){
             this.setDark(true)
         }
