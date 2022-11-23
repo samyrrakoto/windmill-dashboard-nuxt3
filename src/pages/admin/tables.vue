@@ -1,7 +1,7 @@
 <template>
   <div>
       <content-page-title :page-title="'Tables with avatars and actions'"></content-page-title>
-      <element-star-project></element-star-project>
+      <content-star-project></content-star-project>
       <table-wrapper :table-data="tableData"></table-wrapper>
   </div>
 </template>

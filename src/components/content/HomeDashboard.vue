@@ -1,13 +1,13 @@
 <template>
     <div class="container grid">
         <content-page-title :page-title="'Dashboard'"></content-page-title>
-        <element-star-project></element-star-project>
+        <content-star-project></content-star-project>
         <!-- Cards -->
         <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-            <element-card-responsive-with-icon :cardType="'totalClients'" :title="'Total clients'" :content="'6389'"></element-card-responsive-with-icon>
-            <element-card-responsive-with-icon :cardType="'accountBalance'" :title="'Account balance'" :content="'$ 46,760.89'"></element-card-responsive-with-icon>
-            <element-card-responsive-with-icon :cardType="'newSales'" :title="'New sales'" :content="'376'"></element-card-responsive-with-icon>
-            <element-card-responsive-with-icon :cardType="'pendingContacts'" :title="'Pending contacts'" :content="'35'"></element-card-responsive-with-icon>
+            <card-responsive-with-icon :cardType="'totalClients'" :title="'Total clients'" :content="'6389'"></card-responsive-with-icon>
+            <card-responsive-with-icon :cardType="'accountBalance'" :title="'Account balance'" :content="'$ 46,760.89'"></card-responsive-with-icon>
+            <card-responsive-with-icon :cardType="'newSales'" :title="'New sales'" :content="'376'"></card-responsive-with-icon>
+            <card-responsive-with-icon :cardType="'pendingContacts'" :title="'Pending contacts'" :content="'35'"></card-responsive-with-icon>
         </div>
 
         <!-- New Table -->

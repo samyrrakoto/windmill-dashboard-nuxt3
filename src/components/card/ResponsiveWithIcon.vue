@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
-        <element-card-icon-svg-customizable :cardType="cardType"></element-card-icon-svg-customizable>
+        <card-icon-svg-customizable :cardType="cardType"></card-icon-svg-customizable>
         <div>
             <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
             {{ title }}

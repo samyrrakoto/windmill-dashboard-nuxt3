@@ -1,7 +1,7 @@
 <template>
   <div>
     <content-page-title :page-title="'Buttons'"></content-page-title>
-    <element-star-project></element-star-project>
+    <content-star-project></content-star-project>
 
     <!-- Button sizes -->
     <content-section-title :section-title="'Sizes'"></content-section-title>
