@@ -10,10 +10,26 @@
     <!-- Responsive cards -->
     <content-section-title :section-title="'Responsive cards'" />
     <div :class="cardContainersClass" class="xl:grid-cols-4">
-      <card-responsive-with-icon :cardType="'totalClients'" :title="'Total clients'" :content="'6389'" />
-      <card-responsive-with-icon :cardType="'accountBalance'" :title="'Account balance'" :content="'$ 46,760.89'" />
-      <card-responsive-with-icon :cardType="'newSales'" :title="'New sales'" :content="'376'" />
-      <card-responsive-with-icon :cardType="'pendingContacts'" :title="'Pending contacts'" :content="'35'" />
+      <card-responsive-with-icon
+        :svg-pic="'people'"
+        :svg-class="'p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500'"
+        :title="'Total clients'"
+        :content="'6389'" />
+      <card-responsive-with-icon
+        :svg-pic="'money'"
+        :svg-class="'p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500'"
+        :title="'Account balance'"
+        :content="'$ 46,760.89'" />
+      <card-responsive-with-icon
+        :svg-pic="'cart'"
+        :svg-class="'p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500'"
+        :title="'New sales'"
+        :content="'376'" />
+      <card-responsive-with-icon
+        :svg-pic="'message'"
+        :svg-class="'p-3 mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500'"
+        :title="'Pending contacts'"
+        :content="'35'" />
     </div>
 
     <!-- Cards with title -->
