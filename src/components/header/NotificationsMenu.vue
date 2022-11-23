@@ -19,7 +19,7 @@
                 @keydown.escape="closeNotificationsMenu"
                 class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:text-gray-300 dark:border-gray-700 dark:bg-gray-700"
                 aria-label="submenu">
-                <header-notification-elements></header-notification-elements>
+                <header-notification-elements />
             </ul>
         </div>
     </li>

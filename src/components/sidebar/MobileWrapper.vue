@@ -12,7 +12,7 @@
         x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0 transform -translate-x-20"
         >
-        <sidebar-menu-wrapper></sidebar-menu-wrapper>
+        <sidebar-menu-wrapper />
     </aside>
 </template>
 

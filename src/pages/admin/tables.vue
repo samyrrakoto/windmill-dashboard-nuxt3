@@ -1,8 +1,8 @@
 <template>
   <div>
-      <content-page-title :page-title="'Tables with avatars and actions'"></content-page-title>
-      <content-star-project></content-star-project>
-      <table-wrapper :table-data="tableData"></table-wrapper>
+      <content-page-title :page-title="'Tables with avatars and actions'" />
+      <content-star-project />
+      <table-wrapper :table-data="tableData" />
   </div>
 </template>
 

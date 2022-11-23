@@ -1,26 +1,26 @@
 <template>
   <div>
-    <content-page-title :page-title="'Cards'"></content-page-title>
-    <content-star-project></content-star-project>
+    <content-page-title :page-title="'Cards'" />
+    <content-star-project />
 
     <!-- Big section cards -->
-    <content-section-title :section-title="'Big section cards'"></content-section-title>
-    <card-big-section :content="'Large, full width sections goes here'"></card-big-section>
+    <content-section-title :section-title="'Big section cards'" />
+    <card-big-section :content="'Large, full width sections goes here'" />
 
     <!-- Responsive cards -->
-    <content-section-title :section-title="'Responsive cards'"></content-section-title>
+    <content-section-title :section-title="'Responsive cards'" />
     <div :class="cardContainersClass" class="xl:grid-cols-4">
-      <card-responsive-with-icon :cardType="'totalClients'" :title="'Total clients'" :content="'6389'"></card-responsive-with-icon>
-      <card-responsive-with-icon :cardType="'accountBalance'" :title="'Account balance'" :content="'$ 46,760.89'"></card-responsive-with-icon>
-      <card-responsive-with-icon :cardType="'newSales'" :title="'New sales'" :content="'376'"></card-responsive-with-icon>
-      <card-responsive-with-icon :cardType="'pendingContacts'" :title="'Pending contacts'" :content="'35'"></card-responsive-with-icon>
+      <card-responsive-with-icon :cardType="'totalClients'" :title="'Total clients'" :content="'6389'" />
+      <card-responsive-with-icon :cardType="'accountBalance'" :title="'Account balance'" :content="'$ 46,760.89'" />
+      <card-responsive-with-icon :cardType="'newSales'" :title="'New sales'" :content="'376'" />
+      <card-responsive-with-icon :cardType="'pendingContacts'" :title="'Pending contacts'" :content="'35'" />
     </div>
 
     <!-- Cards with title -->
-    <content-section-title :section-title="'Cards with titles'"></content-section-title>
+    <content-section-title :section-title="'Cards with titles'" />
     <div :class="cardContainersClass">
-      <card-with-title :title="'Regular card'" :content="$utils.stringUtils.lipsum()"></card-with-title>
-      <card-with-title :title="'Colored card'" :content="$utils.stringUtils.lipsum()" :bgColor="'bg-purple-600'" :textColor="'text-white'"></card-with-title>
+      <card-with-title :title="'Regular card'" :content="$utils.stringUtils.lipsum()" />
+      <card-with-title :title="'Colored card'" :content="$utils.stringUtils.lipsum()" :bgColor="'bg-purple-600'" :textColor="'text-white'" />
     </div>
   </div>
 </template>

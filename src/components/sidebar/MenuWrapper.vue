@@ -4,9 +4,9 @@
             Windmill DB x Nuxt3
         </NuxtLink>
         <ul class="mt-6">
-            <sidebar-dashboard-menu></sidebar-dashboard-menu>
-            <sidebar-pages-menu></sidebar-pages-menu>
+            <sidebar-dashboard-menu />
+            <sidebar-pages-menu />
         </ul>
-        <sidebar-create-account></sidebar-create-account>
+        <sidebar-create-account />
     </div>
 </template>

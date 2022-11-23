@@ -8,7 +8,7 @@
           >
         </path>
       </svg>
-      <content-module-title :module-title="'404'"></content-module-title>
+      <content-module-title :module-title="'404'" />
       <p class="text-gray-700 dark:text-gray-300">
         Page not found. Check the address or <NuxtLink class="text-purple-600 hover:underline dark:text-purple-300" to="/admin/dashboard">go back</NuxtLink>.
       </p>

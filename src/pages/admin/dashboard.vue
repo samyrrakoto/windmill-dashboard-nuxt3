@@ -1,5 +1,5 @@
 <template>
-  <content-home-dashboard></content-home-dashboard>
+  <content-home-dashboard />
 </template>
 
 <script lang="ts">

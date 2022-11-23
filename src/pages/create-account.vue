@@ -1,5 +1,5 @@
 <template>
-  <auth-create-account></auth-create-account>
+  <auth-create-account />
 </template>
 
 <script lang="ts">

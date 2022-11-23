@@ -1,21 +1,21 @@
 <template>
     <tr class="text-gray-700 dark:text-gray-400">
         <td :class="columnClass">
-            <table-avatar :full-name="avatar.fullname" :title="avatar.title" :picture="avatar.picture"></table-avatar>
+            <table-avatar :full-name="avatar.fullname" :title="avatar.title" :picture="avatar.picture" />
         </td>
         <td :class="columnClass" class="text-sm">
             {{ amount }}
         </td>
         <td :class="columnClass" class="text-xs">
-            <table-status :value="status"></table-status>
+            <table-status :value="status" />
         </td>
         <td :class="columnClass" class="text-sm">
             {{ date }}
         </td>
         <td :class="columnClass">
             <div class="flex items-center space-x-4 text-sm" v-if="hasAction">
-                <table-action :action-type="'edit'"></table-action>
-                <table-action :action-type="'delete'"></table-action>
+                <table-action :action-type="'edit'" />
+                <table-action :action-type="'delete'" />
              </div>
         </td>
     </tr>

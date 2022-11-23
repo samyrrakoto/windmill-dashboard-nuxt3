@@ -22,11 +22,6 @@
 <script lang="ts">
 import { useLayoutStore } from '@/stores/LayoutStore';
 export default defineComponent({
-    beforeMount() {
-        if (localStorage.dark === 'true') {
-            this.setDark(Boolean(localStorage.dark))
-        }
-    },
     computed: {
         ...mapState(useLayoutStore, ['dark'])
     },

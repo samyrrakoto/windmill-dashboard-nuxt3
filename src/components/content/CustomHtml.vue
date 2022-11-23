@@ -1,5 +1,5 @@
 <template>
-    <Html lang="en" class="windmill-dashboard" :class="{ 'theme-dark': dark }"></Html>
+    <Html lang="en" class="windmill-dashboard" :class="{ 'theme-dark': dark }" />
 </template>
 
 <script lang="ts">

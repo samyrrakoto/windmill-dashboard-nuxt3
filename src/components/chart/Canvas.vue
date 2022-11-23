@@ -10,7 +10,7 @@
       :styles="styles"
       :width="width"
       :height="height"
-    ></component>
+    />
 </template>
 
 <script>
