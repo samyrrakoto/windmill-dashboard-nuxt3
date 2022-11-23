@@ -1,5 +1,5 @@
 <template>
-    <auth-image />>
+    <auth-image />
     <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
         <div class="w-full">
             <content-module-title :module-title="'Log in'" />
