@@ -39,7 +39,7 @@ type MenuElement = {
 
 export default defineComponent({
     mounted() {
-        const menu = this.menuElements.find(element => element.menu === String(this.$route.name))
+        const menu = this.menuElements.find(element => (this.menuRoot + element.menu) === String(this.$route.path))
         if (menu) {
             this.toggleSelectedElement(menu);
         } else {
