@@ -14,7 +14,7 @@
 export default defineComponent({
     data() {
         return {
-            githubLink: "https://github.com/estevanmaito/windmill-dashboard"
+            githubLink: "https://github.com/samyrrakoto/windmill-dashboard-nuxt3"
         }
     },
 })
