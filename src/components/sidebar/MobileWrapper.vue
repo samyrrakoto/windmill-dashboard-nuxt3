@@ -1,7 +1,7 @@
 <template>
     <!-- Mobile sidebar -->
     <div>
-        <transition name="backdrop">
+        <transition name="menu-backdrop">
             <div class="fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center" v-if="isMobileSideMenuOpen"></div>
         </transition>
         <transition name="menu">
@@ -26,16 +26,16 @@ export default defineComponent({
 
 <style>
 .menu-enter-active,
-.menu-leave-activ,
-.backdrop-enter-active,
-.backdrop-leave-active {
+.menu-leave-active,
+.menu-backdrop-enter-active,
+.menu-backdrop-leave-active {
     @apply transition ease-in-out duration-150;
 }
 
 .menu-enter-to,
 .menu-leave-from,
-.backdrop-enter-to,
-.backdrop-leave-from {
+.menu-backdrop-enter-to,
+.menu-backdrop-leave-from {
     @apply opacity-100;
 }
 
@@ -44,8 +44,8 @@ export default defineComponent({
     @apply opacity-0 transform -translate-x-2;
 }
 
-.backdrop-enter-from,
-.backdrop-leave-to {
+.menu-backdrop-enter-from,
+.menu-backdrop-leave-to {
     @apply opacity-0
 }
 </style>
