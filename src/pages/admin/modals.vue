@@ -1,5 +1,6 @@
 <template>
   <div>
+      <Title>Modals - {{ $utils.globals.projectName }}</Title>
 			<content-page-title :page-title="'Modals'" />
 			<content-star-project />
       <div class="max-w-2xl px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">

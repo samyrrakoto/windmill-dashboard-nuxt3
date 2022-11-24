@@ -1,4 +1,5 @@
 <template>
+  <Title>Log in - {{ $utils.globals.projectName }}</Title>
   <auth-login />
 </template>
 

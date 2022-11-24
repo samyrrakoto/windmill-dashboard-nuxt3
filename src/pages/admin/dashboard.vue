@@ -1,4 +1,5 @@
 <template>
+  <Title>Home dashboards - {{ $utils.globals.projectName }}</Title>
   <content-home-dashboard />
 </template>
 

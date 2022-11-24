@@ -1,5 +1,6 @@
 <template>
   <div>
+      <Title>Tables - {{ $utils.globals.projectName }}</Title>
       <content-page-title :page-title="'Tables with avatars and actions'" />
       <content-star-project />
       <table-wrapper :table-data="tableData" />

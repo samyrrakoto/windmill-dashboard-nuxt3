@@ -1,4 +1,5 @@
 <template>
+  <Title>Recover password - {{ $utils.globals.projectName }}</Title>
   <auth-forgot-password />
 </template>
 

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Title>Charts - {{ $utils.globals.projectName }}</Title>
     <content-page-title :page-title="'Charts'" />
     <content-star-project />
 

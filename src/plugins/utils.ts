@@ -4,6 +4,9 @@ export default defineNuxtPlugin(nuxtApp => (
     {
         provide: {
             utils: {
+                globals: {
+                    projectName: 'Windmill Dashboard - Nuxt3',
+                },
                 stringUtils: {
                     toUcFirst(text: string): string {
                         return text.charAt(0).toUpperCase() + text.slice(1)

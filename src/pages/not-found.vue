@@ -1,4 +1,5 @@
 <template>
+  <Title>Page not found (404) - {{ $utils.globals.projectName }}</Title>
   <main class="h-full pb-16 overflow-y-auto">
     <div class="container flex flex-col items-center px-6 mx-auto">
       <element-svg :class="'w-12 h-12 mt-8 text-purple-200'" :view-box="'0 0 20 20'" :fill="'currentColor'" :pic="'forbidden'" />
