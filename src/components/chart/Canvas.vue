@@ -14,8 +14,9 @@
 </template>
 
 <script>
-import { Doughnut, Bar, Line } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
+import { Doughnut, Bar, Line } from 'vue-chartjs'
+
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
