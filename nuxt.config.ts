@@ -7,7 +7,7 @@ export default defineNuxtConfig({
             {
               autoImports: [
                 'defineStore',
-                ['defineStore', 'definePiniaStore'],
+                'definePiniaStore',
                 'mapState',
                 'mapActions',
               ],
