@@ -10,6 +10,8 @@
                     :class="textInputClasses, buttonInputClasses"
                     :placeholder="placeHolder"
                     :type="type"
+                    :value="modelValue"
+                    @input="$emit('update:modelValue', $event.target.value)"
                 />
                 <button v-if="(hasButtonLeft || hasButtonRight)"
                     class="absolute inset-y-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent  active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
@@ -22,6 +24,8 @@
                 class="block w-full mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 form-textarea focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
                 rows="3"
                 :placeholder="placeHolder"
+                :value="modelValue"
+                @input="$emit('update:modelValue', $event.target.value)"
             ></textarea>
             <div class="absolute inset-y-0 flex items-center pointer-events-none" :class="iconInputClasses" v-if:="(hasIconLeft || hasIconRight)">
                 <element-svg
@@ -122,6 +126,9 @@ export default defineComponent({
         hasButtonRight: {
             type: Boolean,
             default: false,
+        },
+        modelValue: {
+            type: String,
         }
     }
 })

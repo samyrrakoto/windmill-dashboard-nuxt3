@@ -7,12 +7,12 @@
     <!-- General elements -->
     <content-section-title :section-title="'Elements'" />
     <div :class="sectionWrapperClass">
-      <form-text-input :is-first-element="true" :input-label="'Name'" :place-holder="'Uvuvwevwevwe Onyetenyevwe Ugwemuhwem Osas'" />
-      <form-radio-button :radio-label="'Account Type'" :radio-inputs="radioInputs" />
-      <form-select-options :select-label="'Requested Limit'" :select-options="selectOptions" />
-      <form-select-options :is-multiple="true" :select-label="'Multiple requested limits'" :select-options="selectOptions" />
-      <form-text-input :isTextArea="true" :input-label="'Message'" :place-holder="'Your long text here'" />
-      <form-check-box :checkbox-text="checkBoxText" />
+      <form-text-input :is-first-element="true" :input-label="'Name'" :place-holder="'Uvuvwevwevwe Onyetenyevwe Ugwemuhwem Osas'" v-model="formValues.simpleInput" />
+      <form-radio-button :radio-label="'Account Type'" v-model="formValues.radioInput" :model-value="radioInputs" />
+      <form-select-options :select-label="'Requested Limit'" @new-options="(option: string) =>formValues.selectOption = option" :select-options="selectOptions" />
+      <form-select-options :is-multiple="true" :select-label="'Multiple requested limits'" @new-options="(options: []) =>formValues.mutliSelectOptions = [...options]" :select-options="selectOptions" />
+      <form-text-input :isTextArea="true" :input-label="'Message'" :place-holder="'Your long text here'" v-model="formValues.textInput" />
+      <form-check-box :checkbox-text="checkBoxText" v-model="formValues.checkBox" />
     </div>
 
     <!-- Validation inputs -->
@@ -55,6 +55,14 @@ export default defineComponent({
         { value: '4000', label: '$4,000' },
         { value: '5000', label: '$5,000' },
       ],
+      formValues: {
+        simpleInput: '',
+        textInput: '',
+        radioInput: '',
+        selectOption: '',
+        mutliSelectOptions: [],
+        checkBox: false,
+      },
       checkBoxText: 'I agree to the privacy policy',
       sectionWrapperClass: 'px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800'
     }
